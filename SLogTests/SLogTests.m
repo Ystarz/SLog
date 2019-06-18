@@ -7,7 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-
+//#import "SLog.h"
+#define OC_LOG
 @interface SLogTests : XCTestCase
 
 @end
@@ -25,6 +26,7 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    //OCLOG(@"123");
 }
 
 - (void)testPerformanceExample {

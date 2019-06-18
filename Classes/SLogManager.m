@@ -1,5 +1,5 @@
 //
-//  LogManager.m
+//  SLogManager.m
 //  im_core_ios
 //
 //  Created by mac on 2019/3/11.
@@ -11,16 +11,16 @@
 
 #define LOG_SAVE_TIMEINTERVAL 60*60 //单位s
 
-@interface LogManager()
+@interface SLogManager()
 @property(strong,nonatomic)NSTimer*timer;
 @end
 
 
 //#define KKLOG
-@implementation LogManager
+@implementation SLogManager
 + (instancetype)sharedInstance
 {
-    static LogManager *sharedInstance = nil;
+    static SLogManager *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
@@ -30,19 +30,36 @@
 
 
 +(void)startWork{
-    [[LogManager sharedInstance]start];
+    [SLogManager startWorkOnLogType:LogTypeNone ifCache:NO];
+}
+
++(void)startWorkOnLogType:(LogType)type{
+    [SLogManager startWorkOnLogType:type ifCache:NO];
+}
++(void)startWorkOnLogType:(LogType)type ifCache:(bool)localCache{
+    [[SLogManager sharedInstance]start];
+    [[SLogManager sharedInstance]setLogType:type];
+    [[SLogManager sharedInstance]setIsLocalCache:localCache];
 }
 
 #pragma mark 内部实现
 -(void)start{
-#if !DEBUG
-    // 开始保存日志文件
-   [self saveLogToLocal];
-    //定义计时器
-    self.timer=[NSTimer timerWithTimeInterval:LOG_SAVE_TIMEINTERVAL target:self selector:@selector(timeUpdate) userInfo:nil repeats:true];
-    //开启计时器
-    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-#endif
+    if (self.isLocalCache) {
+        // 开始保存日志文件
+        [self saveLogToLocal];
+        //定义计时器
+        self.timer=[NSTimer timerWithTimeInterval:LOG_SAVE_TIMEINTERVAL target:self selector:@selector(timeUpdate) userInfo:nil repeats:true];
+        //开启计时器
+        [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    }
+//#if !DEBUG
+//    // 开始保存日志文件
+//   [self saveLogToLocal];
+//    //定义计时器
+//    self.timer=[NSTimer timerWithTimeInterval:LOG_SAVE_TIMEINTERVAL target:self selector:@selector(timeUpdate) userInfo:nil repeats:true];
+//    //开启计时器
+//    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+//#endif
 }
 
 -(void)timeUpdate{
@@ -53,7 +70,7 @@
 {
    NSString *documentDirectory = [self createLogDir];
     if (!documentDirectory) {
-        OCLOG(@"日志目录创建失败");
+        OCLOG(@"日志目录创建失败/fail to create log dir");
         return;
     }
     else{
@@ -97,8 +114,9 @@
 }
 
 -(void)log:(NSString*)msg{
-    //[KKLog logI:msg];
-    //KKLogI(msg);
+    if (self.logType==LogTypeNone) {
+        return;
+    }
     msg=[self fixMsg:msg];
     if (self.logDelegate!=nil) {
         if ([self.logDelegate respondsToSelector:@selector(onLog:)]) {
@@ -109,8 +127,9 @@
 }
 
 -(void)logD:(NSString*)msg{
-    //[KKLog logD:msg];
-    //KKLogD(msg);
+    if (self.logType!=LogTypeDebug) {
+        return;
+    }
     msg=[self fixMsg:msg];
     if (self.logDelegate!=nil) {
         //OCLOG(@"You0");
@@ -118,6 +137,32 @@
             //OCLOG(@"You1");
             [self.logDelegate onLogD:msg];
         }
+    }
+}
+
+-(void)logI:(NSString*)msg{
+    if (self.logType==LogTypeNone) {
+        return;
+    }
+    msg=[self fixMsg:msg];
+    if (self.logDelegate!=nil) {
+        if ([self.logDelegate respondsToSelector:@selector(onLogI:)]) {
+            [self.logDelegate onLogI:msg];
+        }
+        
+    }
+}
+
+-(void)logE:(NSString*)msg{
+    if (self.logType==LogTypeNone) {
+        return;
+    }
+    msg=[self fixMsg:msg];
+    if (self.logDelegate!=nil) {
+        if ([self.logDelegate respondsToSelector:@selector(onLogE:)]) {
+            [self.logDelegate onLogE:msg];
+        }
+        
     }
 }
 
