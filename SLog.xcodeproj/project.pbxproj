@@ -78,7 +78,7 @@
 		18207A6D22B77EE20003688E = {
 			isa = PBXGroup;
 			children = (
-				18207A7922B77EE20003688E /* SLog */,
+				18207A7922B77EE20003688E /* Classes */,
 				18207A8422B77EE20003688E /* SLogTests */,
 				18207A7822B77EE20003688E /* Products */,
 				110130D25F5D45ACBDA9418F /* Pods */,
@@ -95,7 +95,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18207A7922B77EE20003688E /* SLog */ = {
+		18207A7922B77EE20003688E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				185D8D8722B8DB47006E53AB /* SLogManager.h */,
@@ -103,7 +103,7 @@
 				18207A7A22B77EE20003688E /* SLog.h */,
 				18207A7B22B77EE20003688E /* Info.plist */,
 			);
-			path = SLog;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		18207A8422B77EE20003688E /* SLogTests */ = {
