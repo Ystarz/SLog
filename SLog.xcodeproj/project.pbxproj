@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0419F1D723AB1925B776A506 /* Pods_SLogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2369C09C0677EC6FF7B5FA0 /* Pods_SLogTests.framework */; };
 		18207A8122B77EE20003688E /* SLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18207A7722B77EE20003688E /* SLog.framework */; };
 		18207A8622B77EE20003688E /* SLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18207A8522B77EE20003688E /* SLogTests.m */; };
 		18207A8822B77EE20003688E /* SLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 18207A7A22B77EE20003688E /* SLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18207A9C22B78C5A0003688E /* SLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18207A9A22B78C5A0003688E /* SLogManager.m */; };
+		185D8D8822B8DB47006E53AB /* SLogManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185D8D8722B8DB47006E53AB /* SLogManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E95979772D83E01BDFFA1436 /* Pods_SLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE54E49AFAB6E8B2E8D36735 /* Pods_SLog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +27,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AACD1512038E7BEF74CFC5B /* Pods-SLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLog.release.xcconfig"; path = "Target Support Files/Pods-SLog/Pods-SLog.release.xcconfig"; sourceTree = "<group>"; };
+		11B862BE879193BFAEB7E675 /* Pods-SLogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLogTests.debug.xcconfig"; path = "Target Support Files/Pods-SLogTests/Pods-SLogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		18207A7722B77EE20003688E /* SLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18207A7A22B77EE20003688E /* SLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLog.h; sourceTree = "<group>"; };
 		18207A7B22B77EE20003688E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18207A8022B77EE20003688E /* SLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18207A8522B77EE20003688E /* SLogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLogTests.m; sourceTree = "<group>"; };
 		18207A8722B77EE20003688E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18207A9A22B78C5A0003688E /* SLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLogManager.m; sourceTree = "<group>"; };
+		185D8D8722B8DB47006E53AB /* SLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLogManager.h; sourceTree = "<group>"; };
+		3110933BC13993AAD04BC249 /* Pods-SLogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLogTests.release.xcconfig"; path = "Target Support Files/Pods-SLogTests/Pods-SLogTests.release.xcconfig"; sourceTree = "<group>"; };
+		A67FC267C8BB11C2466D4784 /* Pods-SLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLog.debug.xcconfig"; path = "Target Support Files/Pods-SLog/Pods-SLog.debug.xcconfig"; sourceTree = "<group>"; };
+		BE54E49AFAB6E8B2E8D36735 /* Pods_SLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2369C09C0677EC6FF7B5FA0 /* Pods_SLogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95979772D83E01BDFFA1436 /* Pods_SLog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +57,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				18207A8122B77EE20003688E /* SLog.framework in Frameworks */,
+				0419F1D723AB1925B776A506 /* Pods_SLogTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110130D25F5D45ACBDA9418F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A67FC267C8BB11C2466D4784 /* Pods-SLog.debug.xcconfig */,
+				0AACD1512038E7BEF74CFC5B /* Pods-SLog.release.xcconfig */,
+				11B862BE879193BFAEB7E675 /* Pods-SLogTests.debug.xcconfig */,
+				3110933BC13993AAD04BC249 /* Pods-SLogTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		18207A6D22B77EE20003688E = {
 			isa = PBXGroup;
 			children = (
 				18207A7922B77EE20003688E /* SLog */,
 				18207A8422B77EE20003688E /* SLogTests */,
 				18207A7822B77EE20003688E /* Products */,
+				110130D25F5D45ACBDA9418F /* Pods */,
+				F2899773C5EE94D666AA98FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +98,8 @@
 		18207A7922B77EE20003688E /* SLog */ = {
 			isa = PBXGroup;
 			children = (
+				185D8D8722B8DB47006E53AB /* SLogManager.h */,
+				18207A9A22B78C5A0003688E /* SLogManager.m */,
 				18207A7A22B77EE20003688E /* SLog.h */,
 				18207A7B22B77EE20003688E /* Info.plist */,
 			);
@@ -86,6 +115,15 @@
 			path = SLogTests;
 			sourceTree = "<group>";
 		};
+		F2899773C5EE94D666AA98FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE54E49AFAB6E8B2E8D36735 /* Pods_SLog.framework */,
+				C2369C09C0677EC6FF7B5FA0 /* Pods_SLogTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -94,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18207A8822B77EE20003688E /* SLog.h in Headers */,
+				185D8D8822B8DB47006E53AB /* SLogManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,10 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18207A8B22B77EE20003688E /* Build configuration list for PBXNativeTarget "SLog" */;
 			buildPhases = (
+				AE59041DB3328ECE17FCE7D9 /* [CP] Check Pods Manifest.lock */,
 				18207A7222B77EE20003688E /* Headers */,
 				18207A7322B77EE20003688E /* Sources */,
 				18207A7422B77EE20003688E /* Frameworks */,
 				18207A7522B77EE20003688E /* Resources */,
+				18207A9822B78BBC0003688E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -122,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18207A8E22B77EE20003688E /* Build configuration list for PBXNativeTarget "SLogTests" */;
 			buildPhases = (
+				8BCBFD16F9A781EE04C26479 /* [CP] Check Pods Manifest.lock */,
 				18207A7C22B77EE20003688E /* Sources */,
 				18207A7D22B77EE20003688E /* Frameworks */,
 				18207A7E22B77EE20003688E /* Resources */,
@@ -188,11 +230,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18207A9822B78BBC0003688E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh /Users/sss/sjf/shell/common/05-create-fw-common-ios.sh /Users/sss/Library/Developer/Xcode/DerivedData/SLog-decinganqwyvfsdeiujmufmqhlru/Build/Products SLog /Users/sss/sjf/IOS/Library/SLog/Framework\n";
+		};
+		8BCBFD16F9A781EE04C26479 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SLogTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE59041DB3328ECE17FCE7D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SLog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18207A7322B77EE20003688E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18207A9C22B78C5A0003688E /* SLogManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +442,7 @@
 		};
 		18207A8C22B77EE20003688E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A67FC267C8BB11C2466D4784 /* Pods-SLog.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -359,6 +467,7 @@
 		};
 		18207A8D22B77EE20003688E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AACD1512038E7BEF74CFC5B /* Pods-SLog.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +492,7 @@
 		};
 		18207A8F22B77EE20003688E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B862BE879193BFAEB7E675 /* Pods-SLogTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6H5442CQNN;
@@ -400,6 +510,7 @@
 		};
 		18207A9022B77EE20003688E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3110933BC13993AAD04BC249 /* Pods-SLogTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6H5442CQNN;

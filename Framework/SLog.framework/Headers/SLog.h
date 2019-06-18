@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "SLogManager.h"
-
-
 //! Project version number for SLog.
 FOUNDATION_EXPORT double SLogVersionNumber;
 
