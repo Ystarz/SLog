@@ -68,5 +68,7 @@ typedef enum{
 +(instancetype)sharedInstance;
 -(void)log:(NSString*)msg;
 -(void)logD:(NSString*)msg;
+-(void)logI:(NSString*)msg;
+-(void)logE:(NSString*)msg;
 -(void)logCrash:(NSException *)exception;
 @end
