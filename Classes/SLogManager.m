@@ -30,13 +30,13 @@
 
 
 +(void)startWork{
-    [SLogManager startWorkOnLogType:LogModeNone ifCache:NO];
+    [SLogManager startWorkOnLogMode:LogModeNone ifCache:NO];
 }
 
-+(void)startWorkOnLogType:(LogMode)type{
++(void)startWorkOnLogMode:(LogMode)type{
     [SLogManager startWorkOnLogMode:type ifCache:NO];
 }
-+(void)startWorkOnLogType:(LogMode)type ifCache:(bool)localCache{
++(void)startWorkOnLogMode:(LogMode)type ifCache:(bool)localCache{
     [[SLogManager sharedInstance]start];
     [[SLogManager sharedInstance]setLogMode:type];
     [[SLogManager sharedInstance]setIsLocalCache:localCache];
