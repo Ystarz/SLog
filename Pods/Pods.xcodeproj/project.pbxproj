@@ -7,76 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		072917F610BDCCCC33298E22CB487F9A /* SDataTools-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82A521556E88A8558E26236DAF491019 /* SDataTools-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		110CBB0A600BD213BE5F2464596DCAC6 /* SFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FB3555E29FDA41735D93065799DBED /* SFileTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		072917F610BDCCCC33298E22CB487F9A /* SDataTools-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9684299E3B9B31234C528469B8285683 /* SDataTools-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11FC8CE86A7C9E5077147FF61DC385E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF078200D3CDAD0F3FB03ED9391A7F0 /* Foundation.framework */; };
+		1480A62A83726E09CE0C4E1BAFD7F64C /* ArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AB152961436E3C29E0E800111CE10635 /* ArrayStack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		14E28479BD93627DE322317815E8C100 /* Pods-SLogTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F935A844D50F1A607BAEEDBDE6F5002B /* Pods-SLogTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15879D92D2166F552476A0367F7783DE /* Pods-SLogTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0F6AC3299793C99A64CD1C17E7B63 /* Pods-SLogTests-dummy.m */; };
-		1880819D5CD3C8CFA13A3189525111D7 /* NSObject+ChatAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8080B898DD2D607E889DD2FA069536 /* NSObject+ChatAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		199D008080E72D18FA234FBCEF6CD5B0 /* SDataTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5309480AB45EA2F88F0E8130470FAE /* SDataTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DECF32FE9DD1201E00216B55FDBECE4 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = B6667F8369C73D853057F40560DE882D /* LinkedList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1F734EA9DE007BC7F491A053937A6E46 /* LoopQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6967E36608D165AA814D93CE731F107E /* LoopQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		20CC1371F324EEF54D9DD35505E5092A /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = B6667F8369C73D853057F40560DE882D /* LinkedList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1880819D5CD3C8CFA13A3189525111D7 /* NSObject+ChatAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 248F4157B3F986FE0C033933E09041AF /* NSObject+ChatAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1DECF32FE9DD1201E00216B55FDBECE4 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C186F4F2700858933A07843EC7D28B6 /* LinkedList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1F734EA9DE007BC7F491A053937A6E46 /* LoopQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BE061CAFE356FCB59C178C1DD5A0C9E4 /* LoopQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		21514538D5242492938C15C07E9D7961 /* Pods-SLog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 679A29C4C13A35764BB3704BD87DDD1E /* Pods-SLog-dummy.m */; };
-		24240918B3FF5E0EE26766A3AD998863 /* SDataConvertTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 47D8C9CDD8628A7085B7FD3E921ADC09 /* SDataConvertTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28CFC92800A140D088E60F8D1BF36F04 /* NSString+SExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = F033CE4246F4B338A3E05A8D9BA33774 /* NSString+SExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29D3772890FFF38127B8347ADE50731B /* NSTimer+ChatAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = D36CA2E1C13D48B98D7CA8DA22A7B9FB /* NSTimer+ChatAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2D1CC7080D171B32ED9D361887DD202F /* NSTimer+ChatAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = D36CA2E1C13D48B98D7CA8DA22A7B9FB /* NSTimer+ChatAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2E49E87F77625845CD01E4583750E0E3 /* SDataTools-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A63A5F66AF8ECEFC7900943EA17315 /* SDataTools-macOS-dummy.m */; };
-		2EC0D2BBC9AE475CC87E51E692CB8534 /* LinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = 587A91EAFB57332C5D8A3934BFCF54E7 /* LinkedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31488F2207F6F59F14931BB09CC77E52 /* ArrayStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4913A959EA6CA86E7223CC13844264B6 /* ArrayStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34F5AFBB0D84DAA26C9AB95D74B7BD32 /* SDataTools-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB38787E4B7A0376BD6726D884A5A2AF /* SDataTools-iOS-dummy.m */; };
-		405978E12276E24D76E4A4A1807CCFAA /* NSString+SExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEB78711223902A6791A15C725FC57F /* NSString+SExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		40D540A4FE01184F57862E4E43027FCD /* SFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FB3555E29FDA41735D93065799DBED /* SFileTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		433F4E364C6E528934ACD74CD19F9653 /* STimeTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DDD4174332E8A4DE696682B83504F5B /* STimeTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28CFC92800A140D088E60F8D1BF36F04 /* NSString+SExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = DABA62655C488D07205A3A2E816F9C26 /* NSString+SExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29D3772890FFF38127B8347ADE50731B /* NSTimer+ChatAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E91A346A5AFB4FD24B5E16FE82D552ED /* NSTimer+ChatAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2EC0D2BBC9AE475CC87E51E692CB8534 /* LinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = FB729AD5F9C3D8F913DF762EA37D2ADF /* LinkedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F225C2862B4DF462CA608D39385EF94 /* SDataConvertTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E2D257E5D663F931B8A9399FA9D26B1 /* SDataConvertTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31488F2207F6F59F14931BB09CC77E52 /* ArrayStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 94D7A3B9F44BE1A0061EA760A689BEBB /* ArrayStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34F5AFBB0D84DAA26C9AB95D74B7BD32 /* SDataTools-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2277CAE53F9D5B4E38CD9B3AA614F4 /* SDataTools-iOS-dummy.m */; };
+		3A894AE8D13C0AC3B58B5B1BD9D95765 /* NSString+SExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F2CCDF260A35ED241F067FF2DEB0BD /* NSString+SExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3FA03E4C90567F0976A7E48B1E89DF12 /* NSTask+TRTaskAdditions_termination.h in Headers */ = {isa = PBXBuildFile; fileRef = A2E952685A2BF2295517A6E5B507760E /* NSTask+TRTaskAdditions_termination.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		405978E12276E24D76E4A4A1807CCFAA /* NSString+SExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F2CCDF260A35ED241F067FF2DEB0BD /* NSString+SExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		40D540A4FE01184F57862E4E43027FCD /* SFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60502FE3ABB1D0CBB85DBD383163E1 /* SFileTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		44EF7473AA4F45CCBD63031968BDA9AC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E0833F774141EB04DC79D0F4664C87 /* Cocoa.framework */; };
-		44F910BC2F2520962D03A6D4FCF46271 /* SQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DF15EC8EA9C6057B72F64363A03D54E6 /* SQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44F910BC2F2520962D03A6D4FCF46271 /* SQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CA797E747F6264A5CBCF92A516EF97A7 /* SQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		462E18376F7596DFB32DF2FFD7AAA1C6 /* Pods-SLog_Mac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEB5C4660549B20B489A0EE0DD092380 /* Pods-SLog_Mac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		471922912B10B82C621BFBAFEFDDFFAF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E0833F774141EB04DC79D0F4664C87 /* Cocoa.framework */; };
-		49D80994D61F577B9E5CD8DA21A80019 /* ArrayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9CDE8275A44E9ADB8DD3E1D54C1D15 /* ArrayQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4C091B0F3E0F06D869ED710FF90F3ACD /* ArrayQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = E7B81FC135823B2223263187FF14FC59 /* ArrayQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CA937B53EBBC141ACB5F9EB1DAFF3AF /* NSObject+ChatAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 2027F443F63272C735FD64B6834465B0 /* NSObject+ChatAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F5814717F9683F698C2DC456BEF7DDA /* ArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C0695A4C2DD0A87B7F2339C147061F25 /* ArrayStack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		580B9C7973145A1EC3B8CEF2CC293E67 /* ArrayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D630F6433DD3D81D7C9366F524CE0F /* ArrayList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		583D562EDA8B2E9C93D1D25C28294092 /* LoopQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6967E36608D165AA814D93CE731F107E /* LoopQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5EF2D1987187A9565F83D686D2B498B0 /* SQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DF15EC8EA9C6057B72F64363A03D54E6 /* SQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6397954AFF53CF3BF91D1FE2FA206288 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E0833F774141EB04DC79D0F4664C87 /* Cocoa.framework */; };
+		485D874CBAD8FF98B91721DEC645A3F7 /* SFileTool.h in Headers */ = {isa = PBXBuildFile; fileRef = C16CB6AA3BC76B865DB621B23840BFCC /* SFileTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49D80994D61F577B9E5CD8DA21A80019 /* ArrayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E54E61257C500D1E976FD95F8BA690 /* ArrayQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4C091B0F3E0F06D869ED710FF90F3ACD /* ArrayQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = ADCBEC616CD975FDB6FFC2197C4A3EA9 /* ArrayQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CA937B53EBBC141ACB5F9EB1DAFF3AF /* NSObject+ChatAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 8899AA9E72E6D4C9E3CE37751ECC5C71 /* NSObject+ChatAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		563CD64860EAE605BC0454C608FBB6FB /* NSString+SExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = DABA62655C488D07205A3A2E816F9C26 /* NSString+SExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B743F763E982DB3B3B1A50F4AC31D28 /* STimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD7B71EEB48C29EBC11968254EA6F4 /* STimeTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		603F233141B7EA5218B376B5938A1AAC /* STimeTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 40C32E74E52EB83032C50ED39F3BF477 /* STimeTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60F1EC9ED262457E5AFB6FDC2DA31486 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C186F4F2700858933A07843EC7D28B6 /* LinkedList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		61CA75F17B01F897A7337F1B580DBE59 /* ArrayStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 94D7A3B9F44BE1A0061EA760A689BEBB /* ArrayStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		622C5C9D4F26AED09E0879DAA000925D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E0833F774141EB04DC79D0F4664C87 /* Cocoa.framework */; };
 		64852EFF66B13F768A1E7935391A2E47 /* Pods-SLog_MacTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA693AD9AB952120B20402D5A86F8A00 /* Pods-SLog_MacTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		698A060B55098C675127B3F23E02626C /* ArrayQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = E7B81FC135823B2223263187FF14FC59 /* ArrayQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A5959692F2FC093127CD19C10A7A24F /* SFileTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E59D3369FD4099D973C95C9FDC64521 /* SFileTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71D80352D3F1BB6D2F516192EB8E8317 /* ArrayList.h in Headers */ = {isa = PBXBuildFile; fileRef = D36A54864FAF6AA68EAEFD5559695773 /* ArrayList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72B26AD4D96CE710797B21DC880547F5 /* LinkedListStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57C8B3DBAAC6FC758EF638160D79FA /* LinkedListStack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		74D02A3F84D178B59C01B0A8A38BFB49 /* ArrayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9CDE8275A44E9ADB8DD3E1D54C1D15 /* ArrayQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		858044D515D38F2BC500C140DCB833AA /* ArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C0695A4C2DD0A87B7F2339C147061F25 /* ArrayStack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6DB5BDCC28EE92F4DFA855DC967B8F84 /* NSTimer+ChatAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E91A346A5AFB4FD24B5E16FE82D552ED /* NSTimer+ChatAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		70F82AC57EF7614C49B53AF4A8853060 /* SNSStringTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C94D0B5F34E6783FCAAC6AD4EA3311 /* SNSStringTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71D80352D3F1BB6D2F516192EB8E8317 /* ArrayList.h in Headers */ = {isa = PBXBuildFile; fileRef = 77375519540C2FA53D20355A6907C13D /* ArrayList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72620F2AB0FB452CB3248F5BF8CF8C15 /* LoopQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = F83BA6E9596D8EFBD97A998CC8A1CA50 /* LoopQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72AB879AFE9FF7262F6F0FF83345E4A8 /* SDataTools-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9084238305C2D4CE690C6967A0AF4C2 /* SDataTools-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77D5BDAA9002D4BD9215BA752F54478B /* LinkedListStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 40778EEF56A929010F9D870F1684D985 /* LinkedListStack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7986AE7559BB7AD209136E66ED3C87A2 /* SDataTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CC133C4881F7E449EB28974866375F4 /* SDataTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E6B04F7CEAC27873F7914B342857E22 /* SQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CA797E747F6264A5CBCF92A516EF97A7 /* SQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		858044D515D38F2BC500C140DCB833AA /* ArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AB152961436E3C29E0E800111CE10635 /* ArrayStack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		870D1010F262D85ACC6AC6B0D816282B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF078200D3CDAD0F3FB03ED9391A7F0 /* Foundation.framework */; };
-		874B63FC6AE16FC4D101580D13676D19 /* STimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 34611930252D421E5CEB8C3DDCA621B4 /* STimeTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8985C3F9DF449D49C501C85D945DDEBB /* LinkedListStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 632EAD5079467FAF4402FE30F5A6C354 /* LinkedListStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D8D706D3FCA1B3B272F5649DC76293B /* Pods-SLog_Mac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EFF4C6D323472088521944F41A3930 /* Pods-SLog_Mac-dummy.m */; };
-		92957C8D1353A15781D958BD98494C89 /* SNSStringTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 440DBF37F5EEFF12AFA8A99592DD4EB7 /* SNSStringTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		959D0AF13BD5408D3BE12EB12118B689 /* ArrayList.h in Headers */ = {isa = PBXBuildFile; fileRef = D36A54864FAF6AA68EAEFD5559695773 /* ArrayList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9750AD88148B64516C78ECC1593D81E2 /* SDataConvertTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F97DB0BEED89A6F40A1044E5E7838B /* SDataConvertTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		92957C8D1353A15781D958BD98494C89 /* SNSStringTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C94D0B5F34E6783FCAAC6AD4EA3311 /* SNSStringTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92E0EC40C65BD9DAEA6B16821F217B19 /* LoopQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BE061CAFE356FCB59C178C1DD5A0C9E4 /* LoopQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9750AD88148B64516C78ECC1593D81E2 /* SDataConvertTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 904CC3BFA6E6364E34EDDEFD4DD5A4C4 /* SDataConvertTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9B611C8F44BC9BC90E7A14793335FCC9 /* SDataConvertTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 904CC3BFA6E6364E34EDDEFD4DD5A4C4 /* SDataConvertTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A1F40ADACC1CC161DA35D79651678D52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF078200D3CDAD0F3FB03ED9391A7F0 /* Foundation.framework */; };
-		A2B423FCA566CECB6786DC9BC1322109 /* LinkedListStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 77680434F7DE3B75F0EE20C803C38006 /* LinkedListStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A955F79C640254BE319329C0A241E819 /* SDataTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5309480AB45EA2F88F0E8130470FAE /* SDataTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA4D432582238115BF594610610BAB5B /* LinkedListStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 77680434F7DE3B75F0EE20C803C38006 /* LinkedListStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAB9ABF1393CA80384BF156FF3C9D362 /* NSString+SExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEB78711223902A6791A15C725FC57F /* NSString+SExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A2B423FCA566CECB6786DC9BC1322109 /* LinkedListStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 632EAD5079467FAF4402FE30F5A6C354 /* LinkedListStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A955F79C640254BE319329C0A241E819 /* SDataTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CC133C4881F7E449EB28974866375F4 /* SDataTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC9A04EE9E899BB8833FB205D780183E /* Pods-SLog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E82D1880D9EB5520BD8F0B34C5B36D /* Pods-SLog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACB8385051ECE5F70AC8B7C48F084EFA /* SDataConvertTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F97DB0BEED89A6F40A1044E5E7838B /* SDataConvertTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AD1D3953C5D08A4026F808895FF5BC5F /* LoopQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A4644E6027D2825A5D4276F0C89CFAD5 /* LoopQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B19EF24812DE450E628CFE5F39285FE3 /* LinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = FB729AD5F9C3D8F913DF762EA37D2ADF /* LinkedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B22811DAE53A2001BF442FCFD7568FDD /* Pods-SLog_MacTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9C2E41636AA556EDFD2472808608AE /* Pods-SLog_MacTests-dummy.m */; };
-		B55A06AA4C79E4717CF19649B86A7BB4 /* ArrayStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4913A959EA6CA86E7223CC13844264B6 /* ArrayStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7CB908DE9B4B59C3F3D5D50B9517EFB /* SDataTools-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D2FDDDECCB0CBC2537A39513638BE5A /* SDataTools-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B91C4E54B6B8B17362B2761903F4B48F /* SDataConvertTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 47D8C9CDD8628A7085B7FD3E921ADC09 /* SDataConvertTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C71852F7F0F8F1428E9DA40CAF13A721 /* ArrayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D630F6433DD3D81D7C9366F524CE0F /* ArrayList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CCD821E3BDA777B115A661F9EBDC7112 /* STimeTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DDD4174332E8A4DE696682B83504F5B /* STimeTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D819621A58E85BBFAE57DF9B01DC2813 /* NSTimer+ChatAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AF23CB0BADFDF6D273E302C30FCE75F8 /* NSTimer+ChatAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D93DFA4A5195D26C5095C58927BAAF7E /* NSString+SExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = F033CE4246F4B338A3E05A8D9BA33774 /* NSString+SExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9D9B1007E8BE8B5177EAF22FEBB453A /* LoopQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A4644E6027D2825A5D4276F0C89CFAD5 /* LoopQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB812A609FE09299F30563DD2F8B18E9 /* NSTimer+ChatAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AF23CB0BADFDF6D273E302C30FCE75F8 /* NSTimer+ChatAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB987271368D9633FEF61DDA42503246 /* LinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = 587A91EAFB57332C5D8A3934BFCF54E7 /* LinkedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5918915E71A87AF2DBCA40F30BBA377 /* SFileTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E59D3369FD4099D973C95C9FDC64521 /* SFileTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EBA22F407F36AC7141322350746F8767 /* STimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 34611930252D421E5CEB8C3DDCA621B4 /* STimeTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		ED2DC3C2AA2489E21832DD1DABF676AF /* LinkedListStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57C8B3DBAAC6FC758EF638160D79FA /* LinkedListStack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F89C683D74451A38FC9E5CD27E9E3D55 /* SNSStringTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 440DBF37F5EEFF12AFA8A99592DD4EB7 /* SNSStringTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2B88CC0D5F0E8B1E7BD61ED52265242 /* ArrayList.h in Headers */ = {isa = PBXBuildFile; fileRef = 77375519540C2FA53D20355A6907C13D /* ArrayList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B91C4E54B6B8B17362B2761903F4B48F /* SDataConvertTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E2D257E5D663F931B8A9399FA9D26B1 /* SDataConvertTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC1D068E9693A1239234104CDCD57581 /* SFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60502FE3ABB1D0CBB85DBD383163E1 /* SFileTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C71852F7F0F8F1428E9DA40CAF13A721 /* ArrayList.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7C35720E7FB6A8B76872EAF123802B /* ArrayList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C753817D66EF461855C1081FF2EF0E7D /* ArrayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E54E61257C500D1E976FD95F8BA690 /* ArrayQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CCD821E3BDA777B115A661F9EBDC7112 /* STimeTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 40C32E74E52EB83032C50ED39F3BF477 /* STimeTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D819621A58E85BBFAE57DF9B01DC2813 /* NSTimer+ChatAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = B752E7B890CE56AB08483A77246E9C30 /* NSTimer+ChatAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9D9B1007E8BE8B5177EAF22FEBB453A /* LoopQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = F83BA6E9596D8EFBD97A998CC8A1CA50 /* LoopQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4AC704225F44BD79E0802223FBFF74F /* ArrayList.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7C35720E7FB6A8B76872EAF123802B /* ArrayList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E5918915E71A87AF2DBCA40F30BBA377 /* SFileTool.h in Headers */ = {isa = PBXBuildFile; fileRef = C16CB6AA3BC76B865DB621B23840BFCC /* SFileTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E89AD88880E120EA9117CC2D0545780C /* NSTimer+ChatAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = B752E7B890CE56AB08483A77246E9C30 /* NSTimer+ChatAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E940836FE39593C6D6BA1807B1A6083F /* SDataTools-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D47901A564E8B8E19FBB390C0C2A533 /* SDataTools-macOS-dummy.m */; };
+		EBA22F407F36AC7141322350746F8767 /* STimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD7B71EEB48C29EBC11968254EA6F4 /* STimeTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ED2DC3C2AA2489E21832DD1DABF676AF /* LinkedListStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 40778EEF56A929010F9D870F1684D985 /* LinkedListStack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FF2674551817037DA9BDEEA391DACDF9 /* ArrayQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = ADCBEC616CD975FDB6FFC2197C4A3EA9 /* ArrayQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,86 +112,87 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05B9844ECC008A3B3922909FC25F29A2 /* SDataTools-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDataTools-iOS-Info.plist"; sourceTree = "<group>"; };
-		05F97DB0BEED89A6F40A1044E5E7838B /* SDataConvertTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDataConvertTool.m; path = Classes/Data/SDataConvertTool.m; sourceTree = "<group>"; };
+		09E54E61257C500D1E976FD95F8BA690 /* ArrayQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ArrayQueue.m; path = Classes/DataClasses/ArrayQueue.m; sourceTree = "<group>"; };
 		0B5D16893961602A39A72E6DBE9D77CD /* Pods-SLogTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLogTests-Info.plist"; sourceTree = "<group>"; };
 		0BB11FC4D2F316D7453C6E62B5536782 /* Pods_SLog_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SLog_Mac.framework; path = "Pods-SLog_Mac.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D2FDDDECCB0CBC2537A39513638BE5A /* SDataTools-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SDataTools-macOS-umbrella.h"; path = "../SDataTools-macOS/SDataTools-macOS-umbrella.h"; sourceTree = "<group>"; };
+		0C186F4F2700858933A07843EC7D28B6 /* LinkedList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LinkedList.m; path = Classes/DataClasses/LinkedList.m; sourceTree = "<group>"; };
 		11CCF2DDAAE705D8F375EADF3CE4D6DF /* Pods-SLog_Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLog_Mac.release.xcconfig"; sourceTree = "<group>"; };
 		18256AF7488EE0DA98DB50798CB16892 /* Pods-SLog_MacTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLog_MacTests-Info.plist"; sourceTree = "<group>"; };
 		1BA50834C5F16EF1E6A0BDD361A50508 /* Pods-SLog_MacTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SLog_MacTests.modulemap"; sourceTree = "<group>"; };
-		1E060D2DF97855CCECD440613288565C /* SDataTools-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SDataTools-macOS.modulemap"; path = "../SDataTools-macOS/SDataTools-macOS.modulemap"; sourceTree = "<group>"; };
-		2027F443F63272C735FD64B6834465B0 /* NSObject+ChatAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+ChatAdd.h"; path = "iOS/NSObject+ChatAdd.h"; sourceTree = "<group>"; };
+		1CC133C4881F7E449EB28974866375F4 /* SDataTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDataTools.h; path = Classes/SDataTools.h; sourceTree = "<group>"; };
+		248F4157B3F986FE0C033933E09041AF /* NSObject+ChatAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ChatAdd.m"; path = "iOS/NSObject+ChatAdd.m"; sourceTree = "<group>"; };
 		292F373B5E531E251575D8E759618869 /* Pods-SLog-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLog-Info.plist"; sourceTree = "<group>"; };
+		2C451D1A46AEE52F77690C0AD117B0EC /* SDataTools-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDataTools-iOS-prefix.pch"; sourceTree = "<group>"; };
 		30E0833F774141EB04DC79D0F4664C87 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		34611930252D421E5CEB8C3DDCA621B4 /* STimeTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STimeTool.m; path = Classes/Data/STimeTool.m; sourceTree = "<group>"; };
 		348E68FFF243738588D3236D81B888D4 /* Pods-SLog_Mac-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLog_Mac-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3A2277CAE53F9D5B4E38CD9B3AA614F4 /* SDataTools-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDataTools-iOS-dummy.m"; sourceTree = "<group>"; };
 		3A2892664134BFF856AF7C59CF00652D /* Pods-SLog_Mac-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLog_Mac-acknowledgements.plist"; sourceTree = "<group>"; };
 		3AA508A8B679AD1CDD24B67DF2806DEC /* Pods_SLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SLog.framework; path = "Pods-SLog.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43B1895AD6C35B6484725043576B2548 /* SDataTools-macOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "SDataTools-macOS-Info.plist"; path = "../SDataTools-macOS/SDataTools-macOS-Info.plist"; sourceTree = "<group>"; };
-		440DBF37F5EEFF12AFA8A99592DD4EB7 /* SNSStringTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNSStringTool.h; path = Classes/Data/SNSStringTool.h; sourceTree = "<group>"; };
+		40778EEF56A929010F9D870F1684D985 /* LinkedListStack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LinkedListStack.m; path = Classes/DataClasses/LinkedListStack.m; sourceTree = "<group>"; };
+		40C32E74E52EB83032C50ED39F3BF477 /* STimeTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STimeTool.h; path = Classes/Data/STimeTool.h; sourceTree = "<group>"; };
 		4521F6986A847EA43CB5E842CA53743A /* Pods-SLogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLogTests.debug.xcconfig"; sourceTree = "<group>"; };
-		47D8C9CDD8628A7085B7FD3E921ADC09 /* SDataConvertTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDataConvertTool.h; path = Classes/Data/SDataConvertTool.h; sourceTree = "<group>"; };
-		4913A959EA6CA86E7223CC13844264B6 /* ArrayStack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ArrayStack.h; path = Classes/DataClasses/ArrayStack.h; sourceTree = "<group>"; };
 		4BCB3B33F41A9EA477ACD269708A39FA /* Pods-SLogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLogTests.release.xcconfig"; sourceTree = "<group>"; };
-		4C5309480AB45EA2F88F0E8130470FAE /* SDataTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDataTools.h; path = Classes/SDataTools.h; sourceTree = "<group>"; };
+		4D47901A564E8B8E19FBB390C0C2A533 /* SDataTools-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SDataTools-macOS-dummy.m"; path = "../SDataTools-macOS/SDataTools-macOS-dummy.m"; sourceTree = "<group>"; };
+		537308D357D0FF46538BBD8A23CD6E88 /* SDataTools-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDataTools-iOS-Info.plist"; sourceTree = "<group>"; };
 		54AED5AE43BDA562D9947EAC5194034F /* Pods-SLog_Mac-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLog_Mac-Info.plist"; sourceTree = "<group>"; };
-		5803A4D6814FA3CECA760019FDA1A5E8 /* SDataTools-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SDataTools-iOS.xcconfig"; sourceTree = "<group>"; };
-		587A91EAFB57332C5D8A3934BFCF54E7 /* LinkedList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LinkedList.h; path = Classes/DataClasses/LinkedList.h; sourceTree = "<group>"; };
+		5A60502FE3ABB1D0CBB85DBD383163E1 /* SFileTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFileTool.m; path = Classes/File/SFileTool.m; sourceTree = "<group>"; };
 		5B4A7D7A7B46F18CC191FB3CBA5F5B06 /* Pods-SLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLog.debug.xcconfig"; sourceTree = "<group>"; };
-		5E1547CC1FAF11E53CF5CB6BB6169E1B /* SDataTools-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SDataTools-iOS.modulemap"; sourceTree = "<group>"; };
+		5E2D257E5D663F931B8A9399FA9D26B1 /* SDataConvertTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDataConvertTool.h; path = Classes/Data/SDataConvertTool.h; sourceTree = "<group>"; };
 		6078F708860BA2BEF3885774DE3EEAD5 /* Pods-SLog_MacTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLog_MacTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		61FB3555E29FDA41735D93065799DBED /* SFileTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFileTool.m; path = Classes/File/SFileTool.m; sourceTree = "<group>"; };
-		6783AB27FFF89A6237274C2540D14B71 /* SDataTools-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SDataTools-macOS-prefix.pch"; path = "../SDataTools-macOS/SDataTools-macOS-prefix.pch"; sourceTree = "<group>"; };
+		632EAD5079467FAF4402FE30F5A6C354 /* LinkedListStack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LinkedListStack.h; path = Classes/DataClasses/LinkedListStack.h; sourceTree = "<group>"; };
 		679A29C4C13A35764BB3704BD87DDD1E /* Pods-SLog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLog-dummy.m"; sourceTree = "<group>"; };
-		6967E36608D165AA814D93CE731F107E /* LoopQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LoopQueue.m; path = Classes/DataClasses/LoopQueue.m; sourceTree = "<group>"; };
 		6A8EE37BDC5135AE6D6C21A787155183 /* Pods-SLog_Mac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SLog_Mac.modulemap"; sourceTree = "<group>"; };
 		6D75B015C3D9E83576F755C16FEA694A /* Pods-SLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLog.release.xcconfig"; sourceTree = "<group>"; };
+		6DB0A18F51811AFD5456E4B54D678A30 /* SDataTools-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SDataTools-iOS.modulemap"; sourceTree = "<group>"; };
 		6EDF8019855FA2937C8E5889867E3CDE /* Pods-SLog_MacTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLog_MacTests.release.xcconfig"; sourceTree = "<group>"; };
-		77680434F7DE3B75F0EE20C803C38006 /* LinkedListStack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LinkedListStack.h; path = Classes/DataClasses/LinkedListStack.h; sourceTree = "<group>"; };
+		77375519540C2FA53D20355A6907C13D /* ArrayList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ArrayList.h; path = Classes/DataClasses/ArrayList.h; sourceTree = "<group>"; };
 		7774FC17CF26313C8CE7976577D862C4 /* Pods-SLog-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLog-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7B47D3C965427B3D47FE463B08D7BC0C /* Pods-SLogTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SLogTests.modulemap"; sourceTree = "<group>"; };
-		80D630F6433DD3D81D7C9366F524CE0F /* ArrayList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ArrayList.m; path = Classes/DataClasses/ArrayList.m; sourceTree = "<group>"; };
-		82A521556E88A8558E26236DAF491019 /* SDataTools-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDataTools-iOS-umbrella.h"; sourceTree = "<group>"; };
+		7C26C01C5806DFD2D8A6066A248BA882 /* SDataTools-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SDataTools-macOS-prefix.pch"; path = "../SDataTools-macOS/SDataTools-macOS-prefix.pch"; sourceTree = "<group>"; };
 		8626AD9578C8DE7E6DE1297CEB15BC21 /* Pods-SLog_MacTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLog_MacTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8688ECFDA699F34CE65CCBF6E3F15194 /* Pods-SLog_Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLog_Mac.debug.xcconfig"; sourceTree = "<group>"; };
 		86EFF4C6D323472088521944F41A3930 /* Pods-SLog_Mac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLog_Mac-dummy.m"; sourceTree = "<group>"; };
 		8869E2528F2F3AA037F6927C982BA57D /* Pods-SLog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SLog.modulemap"; sourceTree = "<group>"; };
-		89A63A5F66AF8ECEFC7900943EA17315 /* SDataTools-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SDataTools-macOS-dummy.m"; path = "../SDataTools-macOS/SDataTools-macOS-dummy.m"; sourceTree = "<group>"; };
-		8DDD4174332E8A4DE696682B83504F5B /* STimeTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STimeTool.h; path = Classes/Data/STimeTool.h; sourceTree = "<group>"; };
+		8899AA9E72E6D4C9E3CE37751ECC5C71 /* NSObject+ChatAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+ChatAdd.h"; path = "iOS/NSObject+ChatAdd.h"; sourceTree = "<group>"; };
 		8F48AE732610391BD1A37FB88DB265D1 /* Pods-SLogTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLogTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		904CC3BFA6E6364E34EDDEFD4DD5A4C4 /* SDataConvertTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDataConvertTool.m; path = Classes/Data/SDataConvertTool.m; sourceTree = "<group>"; };
 		9151D7548B868CA8D61DAC58FD33040A /* Pods-SLog-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLog-acknowledgements.plist"; sourceTree = "<group>"; };
+		92C94D0B5F34E6783FCAAC6AD4EA3311 /* SNSStringTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNSStringTool.h; path = Classes/Data/SNSStringTool.h; sourceTree = "<group>"; };
+		94D7A3B9F44BE1A0061EA760A689BEBB /* ArrayStack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ArrayStack.h; path = Classes/DataClasses/ArrayStack.h; sourceTree = "<group>"; };
+		9684299E3B9B31234C528469B8285683 /* SDataTools-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDataTools-iOS-umbrella.h"; sourceTree = "<group>"; };
 		9794E0F4E3B6819F5808A5419FABFA2B /* Pods-SLogTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLogTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9A9CDE8275A44E9ADB8DD3E1D54C1D15 /* ArrayQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ArrayQueue.m; path = Classes/DataClasses/ArrayQueue.m; sourceTree = "<group>"; };
+		9D8C101A75C3AC018854285F92F03F8B /* SDataTools-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SDataTools-iOS.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E59D3369FD4099D973C95C9FDC64521 /* SFileTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFileTool.h; path = Classes/File/SFileTool.h; sourceTree = "<group>"; };
-		A4644E6027D2825A5D4276F0C89CFAD5 /* LoopQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LoopQueue.h; path = Classes/DataClasses/LoopQueue.h; sourceTree = "<group>"; };
+		9DDD7B71EEB48C29EBC11968254EA6F4 /* STimeTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STimeTool.m; path = Classes/Data/STimeTool.m; sourceTree = "<group>"; };
+		A200088EBE5B644FCD6959FC6A6B1F51 /* SDataTools-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SDataTools-macOS.xcconfig"; path = "../SDataTools-macOS/SDataTools-macOS.xcconfig"; sourceTree = "<group>"; };
+		A2E952685A2BF2295517A6E5B507760E /* NSTask+TRTaskAdditions_termination.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTask+TRTaskAdditions_termination.h"; path = "Mac/NSTask+TRTaskAdditions_termination.h"; sourceTree = "<group>"; };
 		A9E82D1880D9EB5520BD8F0B34C5B36D /* Pods-SLog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLog-umbrella.h"; sourceTree = "<group>"; };
+		AB152961436E3C29E0E800111CE10635 /* ArrayStack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ArrayStack.m; path = Classes/DataClasses/ArrayStack.m; sourceTree = "<group>"; };
+		ADCBEC616CD975FDB6FFC2197C4A3EA9 /* ArrayQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ArrayQueue.h; path = Classes/DataClasses/ArrayQueue.h; sourceTree = "<group>"; };
 		AEB5C4660549B20B489A0EE0DD092380 /* Pods-SLog_Mac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLog_Mac-umbrella.h"; sourceTree = "<group>"; };
-		AF23CB0BADFDF6D273E302C30FCE75F8 /* NSTimer+ChatAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+ChatAdd.h"; path = "Classes/Data/NSTimer+ChatAdd.h"; sourceTree = "<group>"; };
-		B6667F8369C73D853057F40560DE882D /* LinkedList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LinkedList.m; path = Classes/DataClasses/LinkedList.m; sourceTree = "<group>"; };
+		B752E7B890CE56AB08483A77246E9C30 /* NSTimer+ChatAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+ChatAdd.h"; path = "Classes/Data/NSTimer+ChatAdd.h"; sourceTree = "<group>"; };
 		BAEC597D3FDCAF5BA971259A9963A537 /* Pods-SLog_MacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLog_MacTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE061CAFE356FCB59C178C1DD5A0C9E4 /* LoopQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LoopQueue.m; path = Classes/DataClasses/LoopQueue.m; sourceTree = "<group>"; };
 		BEC0F6AC3299793C99A64CD1C17E7B63 /* Pods-SLogTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLogTests-dummy.m"; sourceTree = "<group>"; };
-		C0695A4C2DD0A87B7F2339C147061F25 /* ArrayStack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ArrayStack.m; path = Classes/DataClasses/ArrayStack.m; sourceTree = "<group>"; };
+		C16CB6AA3BC76B865DB621B23840BFCC /* SFileTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFileTool.h; path = Classes/File/SFileTool.h; sourceTree = "<group>"; };
+		C9084238305C2D4CE690C6967A0AF4C2 /* SDataTools-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SDataTools-macOS-umbrella.h"; path = "../SDataTools-macOS/SDataTools-macOS-umbrella.h"; sourceTree = "<group>"; };
 		C95FFF4151104DEE0487FC5621AC8C34 /* Pods_SLog_MacTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SLog_MacTests.framework; path = "Pods-SLog_MacTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA797E747F6264A5CBCF92A516EF97A7 /* SQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQueue.h; path = Classes/SQueue.h; sourceTree = "<group>"; };
 		CAF078200D3CDAD0F3FB03ED9391A7F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CB6CD53BD220382CF68662C29BA957DB /* SDataTools-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDataTools-iOS-prefix.pch"; sourceTree = "<group>"; };
-		CEEB78711223902A6791A15C725FC57F /* NSString+SExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+SExtension.m"; path = "Classes/Data/NSString+SExtension.m"; sourceTree = "<group>"; };
+		CE1D519C580A3C14A47D9E7B38B769AE /* SDataTools-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SDataTools-macOS.modulemap"; path = "../SDataTools-macOS/SDataTools-macOS.modulemap"; sourceTree = "<group>"; };
 		D2BADFD586F781BC61790D9209C9A9A0 /* SDataTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDataTools.framework; path = "SDataTools-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D36A54864FAF6AA68EAEFD5559695773 /* ArrayList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ArrayList.h; path = Classes/DataClasses/ArrayList.h; sourceTree = "<group>"; };
-		D36CA2E1C13D48B98D7CA8DA22A7B9FB /* NSTimer+ChatAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+ChatAdd.m"; path = "Classes/Data/NSTimer+ChatAdd.m"; sourceTree = "<group>"; };
+		D999987B6151DA79294E3FC34C4F5171 /* SDataTools-macOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "SDataTools-macOS-Info.plist"; path = "../SDataTools-macOS/SDataTools-macOS-Info.plist"; sourceTree = "<group>"; };
 		DA693AD9AB952120B20402D5A86F8A00 /* Pods-SLog_MacTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLog_MacTests-umbrella.h"; sourceTree = "<group>"; };
-		DC57C8B3DBAAC6FC758EF638160D79FA /* LinkedListStack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LinkedListStack.m; path = Classes/DataClasses/LinkedListStack.m; sourceTree = "<group>"; };
-		DD97D673558C62D917B6135A31054739 /* SDataTools-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SDataTools-macOS.xcconfig"; path = "../SDataTools-macOS/SDataTools-macOS.xcconfig"; sourceTree = "<group>"; };
-		DF15EC8EA9C6057B72F64363A03D54E6 /* SQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQueue.h; path = Classes/SQueue.h; sourceTree = "<group>"; };
+		DABA62655C488D07205A3A2E816F9C26 /* NSString+SExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+SExtension.h"; path = "Classes/Data/NSString+SExtension.h"; sourceTree = "<group>"; };
 		DF9C2E41636AA556EDFD2472808608AE /* Pods-SLog_MacTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLog_MacTests-dummy.m"; sourceTree = "<group>"; };
+		E1F2CCDF260A35ED241F067FF2DEB0BD /* NSString+SExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+SExtension.m"; path = "Classes/Data/NSString+SExtension.m"; sourceTree = "<group>"; };
 		E4435231CCE4815E57534AC1FDFE5540 /* Pods_SLogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SLogTests.framework; path = "Pods-SLogTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61BEDF397B8747E95CE684F4AE83F41 /* SDataTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDataTools.framework; path = "SDataTools-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7B81FC135823B2223263187FF14FC59 /* ArrayQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ArrayQueue.h; path = Classes/DataClasses/ArrayQueue.h; sourceTree = "<group>"; };
-		EB38787E4B7A0376BD6726D884A5A2AF /* SDataTools-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDataTools-iOS-dummy.m"; sourceTree = "<group>"; };
-		F033CE4246F4B338A3E05A8D9BA33774 /* NSString+SExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+SExtension.h"; path = "Classes/Data/NSString+SExtension.h"; sourceTree = "<group>"; };
+		E91A346A5AFB4FD24B5E16FE82D552ED /* NSTimer+ChatAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+ChatAdd.m"; path = "Classes/Data/NSTimer+ChatAdd.m"; sourceTree = "<group>"; };
+		ED7C35720E7FB6A8B76872EAF123802B /* ArrayList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ArrayList.m; path = Classes/DataClasses/ArrayList.m; sourceTree = "<group>"; };
+		F83BA6E9596D8EFBD97A998CC8A1CA50 /* LoopQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LoopQueue.h; path = Classes/DataClasses/LoopQueue.h; sourceTree = "<group>"; };
 		F935A844D50F1A607BAEEDBDE6F5002B /* Pods-SLogTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLogTests-umbrella.h"; sourceTree = "<group>"; };
-		FE8080B898DD2D607E889DD2FA069536 /* NSObject+ChatAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ChatAdd.m"; path = "iOS/NSObject+ChatAdd.m"; sourceTree = "<group>"; };
+		FB729AD5F9C3D8F913DF762EA37D2ADF /* LinkedList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LinkedList.h; path = Classes/DataClasses/LinkedList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,19 +220,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BD40AF1E4FF869B91F5F3AB30936646 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6397954AFF53CF3BF91D1FE2FA206288 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8439B5AB8A6E63B94530459A9DDBBCC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				44EF7473AA4F45CCBD63031968BDA9AC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1C1C56EAD8F656085FC28E138AD753B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				622C5C9D4F26AED09E0879DAA000925D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,26 +247,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14E0FE9EF7A42C1BE9555DCC9B3CF683 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5E1547CC1FAF11E53CF5CB6BB6169E1B /* SDataTools-iOS.modulemap */,
-				5803A4D6814FA3CECA760019FDA1A5E8 /* SDataTools-iOS.xcconfig */,
-				EB38787E4B7A0376BD6726D884A5A2AF /* SDataTools-iOS-dummy.m */,
-				05B9844ECC008A3B3922909FC25F29A2 /* SDataTools-iOS-Info.plist */,
-				CB6CD53BD220382CF68662C29BA957DB /* SDataTools-iOS-prefix.pch */,
-				82A521556E88A8558E26236DAF491019 /* SDataTools-iOS-umbrella.h */,
-				1E060D2DF97855CCECD440613288565C /* SDataTools-macOS.modulemap */,
-				DD97D673558C62D917B6135A31054739 /* SDataTools-macOS.xcconfig */,
-				89A63A5F66AF8ECEFC7900943EA17315 /* SDataTools-macOS-dummy.m */,
-				43B1895AD6C35B6484725043576B2548 /* SDataTools-macOS-Info.plist */,
-				6783AB27FFF89A6237274C2540D14B71 /* SDataTools-macOS-prefix.pch */,
-				0D2FDDDECCB0CBC2537A39513638BE5A /* SDataTools-macOS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SDataTools-iOS";
-			sourceTree = "<group>";
-		};
 		2E168FF4BD50B9045EAA1A180DEC3B9A /* Pods-SLogTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +287,26 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
+		4DCEB5C3C714C5B89EA9EA262CB98A6B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DB0A18F51811AFD5456E4B54D678A30 /* SDataTools-iOS.modulemap */,
+				9D8C101A75C3AC018854285F92F03F8B /* SDataTools-iOS.xcconfig */,
+				3A2277CAE53F9D5B4E38CD9B3AA614F4 /* SDataTools-iOS-dummy.m */,
+				537308D357D0FF46538BBD8A23CD6E88 /* SDataTools-iOS-Info.plist */,
+				2C451D1A46AEE52F77690C0AD117B0EC /* SDataTools-iOS-prefix.pch */,
+				9684299E3B9B31234C528469B8285683 /* SDataTools-iOS-umbrella.h */,
+				CE1D519C580A3C14A47D9E7B38B769AE /* SDataTools-macOS.modulemap */,
+				A200088EBE5B644FCD6959FC6A6B1F51 /* SDataTools-macOS.xcconfig */,
+				4D47901A564E8B8E19FBB390C0C2A533 /* SDataTools-macOS-dummy.m */,
+				D999987B6151DA79294E3FC34C4F5171 /* SDataTools-macOS-Info.plist */,
+				7C26C01C5806DFD2D8A6066A248BA882 /* SDataTools-macOS-prefix.pch */,
+				C9084238305C2D4CE690C6967A0AF4C2 /* SDataTools-macOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SDataTools-iOS";
+			sourceTree = "<group>";
+		};
 		4EDC20B56A0B9A8564E1FCEA191C83C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +314,51 @@
 				3F8A24B87B4D62BA127BA8D3FE734D3E /* OS X */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		629A746D56B5BEA85FF595FA71181CCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				696E13B0085755FAB14FE7259E33F618 /* SDataTools */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		696E13B0085755FAB14FE7259E33F618 /* SDataTools */ = {
+			isa = PBXGroup;
+			children = (
+				77375519540C2FA53D20355A6907C13D /* ArrayList.h */,
+				ED7C35720E7FB6A8B76872EAF123802B /* ArrayList.m */,
+				ADCBEC616CD975FDB6FFC2197C4A3EA9 /* ArrayQueue.h */,
+				09E54E61257C500D1E976FD95F8BA690 /* ArrayQueue.m */,
+				94D7A3B9F44BE1A0061EA760A689BEBB /* ArrayStack.h */,
+				AB152961436E3C29E0E800111CE10635 /* ArrayStack.m */,
+				FB729AD5F9C3D8F913DF762EA37D2ADF /* LinkedList.h */,
+				0C186F4F2700858933A07843EC7D28B6 /* LinkedList.m */,
+				632EAD5079467FAF4402FE30F5A6C354 /* LinkedListStack.h */,
+				40778EEF56A929010F9D870F1684D985 /* LinkedListStack.m */,
+				F83BA6E9596D8EFBD97A998CC8A1CA50 /* LoopQueue.h */,
+				BE061CAFE356FCB59C178C1DD5A0C9E4 /* LoopQueue.m */,
+				8899AA9E72E6D4C9E3CE37751ECC5C71 /* NSObject+ChatAdd.h */,
+				248F4157B3F986FE0C033933E09041AF /* NSObject+ChatAdd.m */,
+				DABA62655C488D07205A3A2E816F9C26 /* NSString+SExtension.h */,
+				E1F2CCDF260A35ED241F067FF2DEB0BD /* NSString+SExtension.m */,
+				A2E952685A2BF2295517A6E5B507760E /* NSTask+TRTaskAdditions_termination.h */,
+				B752E7B890CE56AB08483A77246E9C30 /* NSTimer+ChatAdd.h */,
+				E91A346A5AFB4FD24B5E16FE82D552ED /* NSTimer+ChatAdd.m */,
+				5E2D257E5D663F931B8A9399FA9D26B1 /* SDataConvertTool.h */,
+				904CC3BFA6E6364E34EDDEFD4DD5A4C4 /* SDataConvertTool.m */,
+				1CC133C4881F7E449EB28974866375F4 /* SDataTools.h */,
+				C16CB6AA3BC76B865DB621B23840BFCC /* SFileTool.h */,
+				5A60502FE3ABB1D0CBB85DBD383163E1 /* SFileTool.m */,
+				92C94D0B5F34E6783FCAAC6AD4EA3311 /* SNSStringTool.h */,
+				CA797E747F6264A5CBCF92A516EF97A7 /* SQueue.h */,
+				40C32E74E52EB83032C50ED39F3BF477 /* STimeTool.h */,
+				9DDD7B71EEB48C29EBC11968254EA6F4 /* STimeTool.m */,
+				4DCEB5C3C714C5B89EA9EA262CB98A6B /* Support Files */,
+			);
+			name = SDataTools;
+			path = SDataTools;
 			sourceTree = "<group>";
 		};
 		772252F560847FCA860A9705A890FA66 /* Pods-SLog_Mac */ = {
@@ -378,56 +425,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C2E74BEEA8D4DEA560F834D812B509FD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CC898059A26D574EBE371EA97C4C5D5E /* SDataTools */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		CC898059A26D574EBE371EA97C4C5D5E /* SDataTools */ = {
-			isa = PBXGroup;
-			children = (
-				D36A54864FAF6AA68EAEFD5559695773 /* ArrayList.h */,
-				80D630F6433DD3D81D7C9366F524CE0F /* ArrayList.m */,
-				E7B81FC135823B2223263187FF14FC59 /* ArrayQueue.h */,
-				9A9CDE8275A44E9ADB8DD3E1D54C1D15 /* ArrayQueue.m */,
-				4913A959EA6CA86E7223CC13844264B6 /* ArrayStack.h */,
-				C0695A4C2DD0A87B7F2339C147061F25 /* ArrayStack.m */,
-				587A91EAFB57332C5D8A3934BFCF54E7 /* LinkedList.h */,
-				B6667F8369C73D853057F40560DE882D /* LinkedList.m */,
-				77680434F7DE3B75F0EE20C803C38006 /* LinkedListStack.h */,
-				DC57C8B3DBAAC6FC758EF638160D79FA /* LinkedListStack.m */,
-				A4644E6027D2825A5D4276F0C89CFAD5 /* LoopQueue.h */,
-				6967E36608D165AA814D93CE731F107E /* LoopQueue.m */,
-				2027F443F63272C735FD64B6834465B0 /* NSObject+ChatAdd.h */,
-				FE8080B898DD2D607E889DD2FA069536 /* NSObject+ChatAdd.m */,
-				F033CE4246F4B338A3E05A8D9BA33774 /* NSString+SExtension.h */,
-				CEEB78711223902A6791A15C725FC57F /* NSString+SExtension.m */,
-				AF23CB0BADFDF6D273E302C30FCE75F8 /* NSTimer+ChatAdd.h */,
-				D36CA2E1C13D48B98D7CA8DA22A7B9FB /* NSTimer+ChatAdd.m */,
-				47D8C9CDD8628A7085B7FD3E921ADC09 /* SDataConvertTool.h */,
-				05F97DB0BEED89A6F40A1044E5E7838B /* SDataConvertTool.m */,
-				4C5309480AB45EA2F88F0E8130470FAE /* SDataTools.h */,
-				9E59D3369FD4099D973C95C9FDC64521 /* SFileTool.h */,
-				61FB3555E29FDA41735D93065799DBED /* SFileTool.m */,
-				440DBF37F5EEFF12AFA8A99592DD4EB7 /* SNSStringTool.h */,
-				DF15EC8EA9C6057B72F64363A03D54E6 /* SQueue.h */,
-				8DDD4174332E8A4DE696682B83504F5B /* STimeTool.h */,
-				34611930252D421E5CEB8C3DDCA621B4 /* STimeTool.m */,
-				14E0FE9EF7A42C1BE9555DCC9B3CF683 /* Support Files */,
-			);
-			name = SDataTools;
-			path = SDataTools;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				4EDC20B56A0B9A8564E1FCEA191C83C4 /* Frameworks */,
-				C2E74BEEA8D4DEA560F834D812B509FD /* Pods */,
+				629A746D56B5BEA85FF595FA71181CCB /* Pods */,
 				B803F51C1EA5708ACB0FD813113EB53F /* Products */,
 				9144B6E1E22C1C82E486FF6AC7394613 /* Targets Support Files */,
 			);
@@ -483,33 +486,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD2E915DFE5A0BA824BD58E00275DE70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2B88CC0D5F0E8B1E7BD61ED52265242 /* ArrayList.h in Headers */,
+				FF2674551817037DA9BDEEA391DACDF9 /* ArrayQueue.h in Headers */,
+				61CA75F17B01F897A7337F1B580DBE59 /* ArrayStack.h in Headers */,
+				B19EF24812DE450E628CFE5F39285FE3 /* LinkedList.h in Headers */,
+				8985C3F9DF449D49C501C85D945DDEBB /* LinkedListStack.h in Headers */,
+				72620F2AB0FB452CB3248F5BF8CF8C15 /* LoopQueue.h in Headers */,
+				563CD64860EAE605BC0454C608FBB6FB /* NSString+SExtension.h in Headers */,
+				3FA03E4C90567F0976A7E48B1E89DF12 /* NSTask+TRTaskAdditions_termination.h in Headers */,
+				E89AD88880E120EA9117CC2D0545780C /* NSTimer+ChatAdd.h in Headers */,
+				2F225C2862B4DF462CA608D39385EF94 /* SDataConvertTool.h in Headers */,
+				72AB879AFE9FF7262F6F0FF83345E4A8 /* SDataTools-macOS-umbrella.h in Headers */,
+				7986AE7559BB7AD209136E66ED3C87A2 /* SDataTools.h in Headers */,
+				485D874CBAD8FF98B91721DEC645A3F7 /* SFileTool.h in Headers */,
+				70F82AC57EF7614C49B53AF4A8853060 /* SNSStringTool.h in Headers */,
+				7E6B04F7CEAC27873F7914B342857E22 /* SQueue.h in Headers */,
+				603F233141B7EA5218B376B5938A1AAC /* STimeTool.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF931592041B122DB3E17EE0EDAF80DC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				462E18376F7596DFB32DF2FFD7AAA1C6 /* Pods-SLog_Mac-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D838A54A3BF2B14F4E475E0F31E6F1C4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				959D0AF13BD5408D3BE12EB12118B689 /* ArrayList.h in Headers */,
-				698A060B55098C675127B3F23E02626C /* ArrayQueue.h in Headers */,
-				B55A06AA4C79E4717CF19649B86A7BB4 /* ArrayStack.h in Headers */,
-				DB987271368D9633FEF61DDA42503246 /* LinkedList.h in Headers */,
-				AA4D432582238115BF594610610BAB5B /* LinkedListStack.h in Headers */,
-				AD1D3953C5D08A4026F808895FF5BC5F /* LoopQueue.h in Headers */,
-				D93DFA4A5195D26C5095C58927BAAF7E /* NSString+SExtension.h in Headers */,
-				DB812A609FE09299F30563DD2F8B18E9 /* NSTimer+ChatAdd.h in Headers */,
-				24240918B3FF5E0EE26766A3AD998863 /* SDataConvertTool.h in Headers */,
-				B7CB908DE9B4B59C3F3D5D50B9517EFB /* SDataTools-macOS-umbrella.h in Headers */,
-				199D008080E72D18FA234FBCEF6CD5B0 /* SDataTools.h in Headers */,
-				6A5959692F2FC093127CD19C10A7A24F /* SFileTool.h in Headers */,
-				F89C683D74451A38FC9E5CD27E9E3D55 /* SNSStringTool.h in Headers */,
-				5EF2D1987187A9565F83D686D2B498B0 /* SQueue.h in Headers */,
-				433F4E364C6E528934ACD74CD19F9653 /* STimeTool.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,12 +616,12 @@
 		};
 		B3D68F0741F4B50765D25DE8B5F1F774 /* SDataTools-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 39AD129A620E9378354854266785712D /* Build configuration list for PBXNativeTarget "SDataTools-macOS" */;
+			buildConfigurationList = 7084850EBBBD79222E8C551E9A698D83 /* Build configuration list for PBXNativeTarget "SDataTools-macOS" */;
 			buildPhases = (
-				D838A54A3BF2B14F4E475E0F31E6F1C4 /* Headers */,
-				5315303781F9A55626C3E604DF00AC56 /* Sources */,
-				6BD40AF1E4FF869B91F5F3AB30936646 /* Frameworks */,
-				BBA98DC6B910DBA48EE6018E38B60CA0 /* Resources */,
+				AD2E915DFE5A0BA824BD58E00275DE70 /* Headers */,
+				B4A848AF2D9F81704D30DFF4EAB73D91 /* Sources */,
+				A1C1C56EAD8F656085FC28E138AD753B /* Frameworks */,
+				D0D98ED1A738CBB49EA2A7425359A47D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -688,14 +692,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BBA98DC6B910DBA48EE6018E38B60CA0 /* Resources */ = {
+		C7C5224F7C799AC2B0C47F565D1FB3C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7C5224F7C799AC2B0C47F565D1FB3C9 /* Resources */ = {
+		D0D98ED1A738CBB49EA2A7425359A47D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -741,22 +745,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5315303781F9A55626C3E604DF00AC56 /* Sources */ = {
+		B4A848AF2D9F81704D30DFF4EAB73D91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				580B9C7973145A1EC3B8CEF2CC293E67 /* ArrayList.m in Sources */,
-				74D02A3F84D178B59C01B0A8A38BFB49 /* ArrayQueue.m in Sources */,
-				4F5814717F9683F698C2DC456BEF7DDA /* ArrayStack.m in Sources */,
-				20CC1371F324EEF54D9DD35505E5092A /* LinkedList.m in Sources */,
-				72B26AD4D96CE710797B21DC880547F5 /* LinkedListStack.m in Sources */,
-				583D562EDA8B2E9C93D1D25C28294092 /* LoopQueue.m in Sources */,
-				AAB9ABF1393CA80384BF156FF3C9D362 /* NSString+SExtension.m in Sources */,
-				2D1CC7080D171B32ED9D361887DD202F /* NSTimer+ChatAdd.m in Sources */,
-				ACB8385051ECE5F70AC8B7C48F084EFA /* SDataConvertTool.m in Sources */,
-				2E49E87F77625845CD01E4583750E0E3 /* SDataTools-macOS-dummy.m in Sources */,
-				110CBB0A600BD213BE5F2464596DCAC6 /* SFileTool.m in Sources */,
-				874B63FC6AE16FC4D101580D13676D19 /* STimeTool.m in Sources */,
+				E4AC704225F44BD79E0802223FBFF74F /* ArrayList.m in Sources */,
+				C753817D66EF461855C1081FF2EF0E7D /* ArrayQueue.m in Sources */,
+				1480A62A83726E09CE0C4E1BAFD7F64C /* ArrayStack.m in Sources */,
+				60F1EC9ED262457E5AFB6FDC2DA31486 /* LinkedList.m in Sources */,
+				77D5BDAA9002D4BD9215BA752F54478B /* LinkedListStack.m in Sources */,
+				92E0EC40C65BD9DAEA6B16821F217B19 /* LoopQueue.m in Sources */,
+				3A894AE8D13C0AC3B58B5B1BD9D95765 /* NSString+SExtension.m in Sources */,
+				6DB5BDCC28EE92F4DFA855DC967B8F84 /* NSTimer+ChatAdd.m in Sources */,
+				9B611C8F44BC9BC90E7A14793335FCC9 /* SDataConvertTool.m in Sources */,
+				E940836FE39593C6D6BA1807B1A6083F /* SDataTools-macOS-dummy.m in Sources */,
+				BC1D068E9693A1239234104CDCD57581 /* SFileTool.m in Sources */,
+				5B743F763E982DB3B3B1A50F4AC31D28 /* STimeTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,43 +810,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		10B64E02C09A425709428E9F6B7541BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD97D673558C62D917B6135A31054739 /* SDataTools-macOS.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/SDataTools-macOS/SDataTools-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SDataTools-macOS/SDataTools-macOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/SDataTools-macOS/SDataTools-macOS.modulemap";
-				PRODUCT_MODULE_NAME = SDataTools;
-				PRODUCT_NAME = SDataTools;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		14C02E3B0F0D0DA11E956038FBE3E950 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -946,7 +913,7 @@
 		};
 		3B9C120F39F9450FE1DED6DA3C7DF135 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5803A4D6814FA3CECA760019FDA1A5E8 /* SDataTools-iOS.xcconfig */;
+			baseConfigurationReference = 9D8C101A75C3AC018854285F92F03F8B /* SDataTools-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1055,6 +1022,43 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		7E43CBBE127AB770B51776CE8BF06713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A200088EBE5B644FCD6959FC6A6B1F51 /* SDataTools-macOS.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SDataTools-macOS/SDataTools-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDataTools-macOS/SDataTools-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/SDataTools-macOS/SDataTools-macOS.modulemap";
+				PRODUCT_MODULE_NAME = SDataTools;
+				PRODUCT_NAME = SDataTools;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		81CD67113AF6C34B8A24B59B6F6ED5EB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1209,43 +1213,6 @@
 			};
 			name = Release;
 		};
-		C327A7FD019FFE7EC70BC7012B9A7BF2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD97D673558C62D917B6135A31054739 /* SDataTools-macOS.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/SDataTools-macOS/SDataTools-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SDataTools-macOS/SDataTools-macOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/SDataTools-macOS/SDataTools-macOS.modulemap";
-				PRODUCT_MODULE_NAME = SDataTools;
-				PRODUCT_NAME = SDataTools;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		C5DE540738E9E35B70E31D65E2FAD75A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAEC597D3FDCAF5BA971259A9963A537 /* Pods-SLog_MacTests.debug.xcconfig */;
@@ -1286,9 +1253,46 @@
 			};
 			name = Debug;
 		};
+		CC6174BFC38CBBC9DDA2D5FD81E635EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A200088EBE5B644FCD6959FC6A6B1F51 /* SDataTools-macOS.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SDataTools-macOS/SDataTools-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDataTools-macOS/SDataTools-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/SDataTools-macOS/SDataTools-macOS.modulemap";
+				PRODUCT_MODULE_NAME = SDataTools;
+				PRODUCT_NAME = SDataTools;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		F6EE11499F4E5941CFF0C29B0EA5CE39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5803A4D6814FA3CECA760019FDA1A5E8 /* SDataTools-iOS.xcconfig */;
+			baseConfigurationReference = 9D8C101A75C3AC018854285F92F03F8B /* SDataTools-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1406,15 +1410,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		39AD129A620E9378354854266785712D /* Build configuration list for PBXNativeTarget "SDataTools-macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C327A7FD019FFE7EC70BC7012B9A7BF2 /* Debug */,
-				10B64E02C09A425709428E9F6B7541BF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1429,6 +1424,15 @@
 			buildConfigurations = (
 				8F854DDE0E8404DC246205AB28E44D0E /* Debug */,
 				A83D08DBE8186B589CE43AE8E2E41F16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7084850EBBBD79222E8C551E9A698D83 /* Build configuration list for PBXNativeTarget "SDataTools-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC6174BFC38CBBC9DDA2D5FD81E635EA /* Debug */,
+				7E43CBBE127AB770B51776CE8BF06713 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

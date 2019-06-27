@@ -24,6 +24,7 @@
 #import "SFileTool.h"
 #import "SDataTools.h"
 #import "SQueue.h"
+#import "NSTask+TRTaskAdditions_termination.h"
 
 FOUNDATION_EXPORT double SDataToolsVersionNumber;
 FOUNDATION_EXPORT const unsigned char SDataToolsVersionString[];

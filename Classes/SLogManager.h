@@ -21,46 +21,40 @@
 
 
 typedef enum{
-    LogTypeDebug=0,
-    LogTypeRealease,
-    LogTypeNone,
+    LogTypeNormal=1<<0,
+    LogTypeDebug=1<<1,
+    LogTypeInfo=1<<2,
+    LogTypeError=1<<3,
 } LogType;
 
-//#define LOGPREFIX @"IM"
-//#ifdef OC_LOGS
-//#define OCLOGS(fmt, ...)    \
-//(NSLog)(@"%@",[NSString stringWithFormat:@"%@%@",LOGPREFIX,[NSString stringWithFormat:fmt,##__VA_ARGS__]]);           \
-//[[SLogManager sharedInstance] log:[NSString stringWithFormat:@"%@%@",LOGPREFIX,[NSString stringWithFormat:fmt,##__VA_ARGS__]]]//[[SLogManager sharedInstance] log:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
-//#else
-//#define OCLOGS(fmt, ...){}
-//#endif
+typedef enum{
+    LogModeDebug=1<<0,
+    LogModeRealease=1<<1,
+    LogModeNone=1<<2,
+} LogMode;
 
-//#ifdef OC_LOG
+
 #define OCLOG(fmt, ...)    \
 (NSLog)((fmt), ##__VA_ARGS__);           \
 [[SLogManager sharedInstance] log:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
-//#else
-//#define OCLOG(fmt, ...){}
-//#endif
 
-//#ifdef OC_LOGD
+
 #define OCLOGD(fmt, ...)            \
 (NSLog)((fmt), ##__VA_ARGS__);           \
 [[SLogManager sharedInstance] logD:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
+
 
 #define OCLOGE(fmt, ...)    \
 (NSLog)((fmt), ##__VA_ARGS__);           \
 [[SLogManager sharedInstance] logE:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
 
+
 #define OCLOGI(fmt, ...)    \
 (NSLog)((fmt), ##__VA_ARGS__);           \
 [[SLogManager sharedInstance] logI:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
-//#else
-//#define OCLOGD(fmt, ...){}
-//#endif
 
-//NSString *msg=[[NSString alloc]initWithFormat:fmt arguments:##args];
-@protocol LogDelegate<NSObject>
+
+@protocol SLogDelegate<NSObject>
 -(void)onLog:(NSString*) msg;
 -(void)onLogD:(NSString*) msg;
 -(void)onLogI:(NSString*) msg;
@@ -68,14 +62,14 @@ typedef enum{
 @end
 
 @interface SLogManager : NSObject
-@property(weak,nonatomic)id<LogDelegate> logDelegate;
+@property(weak,nonatomic)id<SLogDelegate> logDelegate;
 @property(assign,nonatomic)bool isLocalCache;
-@property(assign,nonatomic)LogType logType;
+@property(assign,nonatomic)LogMode logMode;
 //@property(assign,nonatomic)bool isXcodePrint;
 
 +(void)startWork;
-+(void)startWorkOnLogType:(LogType)type;
-+(void)startWorkOnLogType:(LogType)type ifCache:(bool)localCache;
++(void)startWorkOnLogMode:(LogMode)type;
++(void)startWorkOnLogMode:(LogMode)type ifCache:(bool)localCache;
 +(instancetype)sharedInstance;
 -(void)log:(NSString*)msg;
 -(void)logD:(NSString*)msg;

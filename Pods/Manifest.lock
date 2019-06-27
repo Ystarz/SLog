@@ -1,5 +1,5 @@
 PODS:
-  - SDataTools (0.1.6)
+  - SDataTools (0.1.9)
 
 DEPENDENCIES:
   - SDataTools
@@ -9,7 +9,7 @@ SPEC REPOS:
     - SDataTools
 
 SPEC CHECKSUMS:
-  SDataTools: 1c32077f44154f2218c4360f46a85e82237a7704
+  SDataTools: ab75c3d5a82011e9af05afb6db1a4e2272a3e984
 
 PODFILE CHECKSUM: 6554c26a634e585f36276555fc32c77293764e09
 

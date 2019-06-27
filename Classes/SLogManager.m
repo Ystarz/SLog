@@ -30,15 +30,15 @@
 
 
 +(void)startWork{
-    [SLogManager startWorkOnLogType:LogTypeNone ifCache:NO];
+    [SLogManager startWorkOnLogType:LogModeNone ifCache:NO];
 }
 
-+(void)startWorkOnLogType:(LogType)type{
-    [SLogManager startWorkOnLogType:type ifCache:NO];
++(void)startWorkOnLogType:(LogMode)type{
+    [SLogManager startWorkOnLogMode:type ifCache:NO];
 }
-+(void)startWorkOnLogType:(LogType)type ifCache:(bool)localCache{
++(void)startWorkOnLogType:(LogMode)type ifCache:(bool)localCache{
     [[SLogManager sharedInstance]start];
-    [[SLogManager sharedInstance]setLogType:type];
+    [[SLogManager sharedInstance]setLogMode:type];
     [[SLogManager sharedInstance]setIsLocalCache:localCache];
 }
 
@@ -114,7 +114,7 @@
 }
 
 -(void)log:(NSString*)msg{
-    if (self.logType==LogTypeNone) {
+    if (self.logMode==LogModeNone) {
         return;
     }
     msg=[self fixMsg:msg];
@@ -127,7 +127,7 @@
 }
 
 -(void)logD:(NSString*)msg{
-    if (self.logType!=LogTypeDebug) {
+    if (self.logMode!=LogModeDebug) {
         return;
     }
     msg=[self fixMsg:msg];
@@ -141,7 +141,7 @@
 }
 
 -(void)logI:(NSString*)msg{
-    if (self.logType==LogTypeNone) {
+    if (self.logMode==LogModeNone) {
         return;
     }
     msg=[self fixMsg:msg];
@@ -154,7 +154,7 @@
 }
 
 -(void)logE:(NSString*)msg{
-    if (self.logType==LogTypeNone) {
+    if (self.logMode==LogModeNone) {
         return;
     }
     msg=[self fixMsg:msg];
