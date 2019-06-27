@@ -7,17 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SDataTools/SDataTools.h>
-//#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-//// iOS Simulator
-//// iOS device
-//
-//#elif TARGET_OS_MAC
-//// Other kinds of Mac OS
-//#import <SDataToolsLib/SDataToolsLib_Mac.h>
-//#else
-//#   error "Unknown Apple platform"
-//#endif
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
+// iOS Simulator
+// iOS device
+#import <SDataToolsLib/STools.h>
+#elif TARGET_OS_MAC
+// Other kinds of Mac OS
+#import <SDataToolsLib/SDataToolsLib_Mac.h>
+#else
+#   error "Unknown Apple platform"
+#endif
 
 
 typedef enum{

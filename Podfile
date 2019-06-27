@@ -5,7 +5,7 @@ inhibit_all_warnings!
 def commonPods #通用pods集
     # pod 'AFNetworking','~> 3.2.1'
     # pod 'Masonry'
-    pod 'SDataToolsLib'
+    pod 'SDataTools'
 end
 
 def  appOnlyPods #app专用pods集
@@ -19,6 +19,7 @@ end
 
 target 'SLog' do
   # Comment the next line if you don't want to use dynamic frameworks
+  platform :ios, '9.3'
   use_frameworks!
   commonPods
   # Pods for SLog
@@ -28,4 +29,16 @@ target 'SLog' do
     # Pods for testing
   end
 
+end
+
+
+target "SLog_Mac" do
+   platform :osx, '10.10'
+  use_frameworks!
+  commonPods
+
+   target 'SLog_MacTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 end
