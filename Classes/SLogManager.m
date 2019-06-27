@@ -16,7 +16,7 @@
 @end
 
 
-//#define KKLOG
+
 @implementation SLogManager
 + (instancetype)sharedInstance
 {
@@ -37,9 +37,10 @@
     [SLogManager startWorkOnLogMode:type ifCache:NO];
 }
 +(void)startWorkOnLogMode:(LogMode)type ifCache:(bool)localCache{
-    [[SLogManager sharedInstance]start];
+    
     [[SLogManager sharedInstance]setLogMode:type];
     [[SLogManager sharedInstance]setIsLocalCache:localCache];
+    [[SLogManager sharedInstance]start];
 }
 
 #pragma mark 内部实现
