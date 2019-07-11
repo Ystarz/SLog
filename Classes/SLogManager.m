@@ -118,7 +118,8 @@
     if (self.logMode==LogModeNone) {
         return;
     }
-    msg=[self fixMsg:msg];
+    msg=[self fixMsg:msg type:LogTypeNormal];
+    NSLog(@"%@",msg);
     if (self.logDelegate!=nil) {
         if ([self.logDelegate respondsToSelector:@selector(onLog:)]) {
              [self.logDelegate onLog:msg];
@@ -131,7 +132,8 @@
     if (self.logMode!=LogModeDebug) {
         return;
     }
-    msg=[self fixMsg:msg];
+    msg=[self fixMsg:msg type:LogTypeDebug];
+    NSLog(@"%@",msg);
     if (self.logDelegate!=nil) {
         //OCLOG(@"You0");
         if ([self.logDelegate respondsToSelector:@selector(onLogD:)]) {
@@ -145,7 +147,8 @@
     if (self.logMode==LogModeNone) {
         return;
     }
-    msg=[self fixMsg:msg];
+    msg=[self fixMsg:msg type:LogTypeInfo];
+    NSLog(@"%@",msg);
     if (self.logDelegate!=nil) {
         if ([self.logDelegate respondsToSelector:@selector(onLogI:)]) {
             [self.logDelegate onLogI:msg];
@@ -158,7 +161,8 @@
     if (self.logMode==LogModeNone) {
         return;
     }
-    msg=[self fixMsg:msg];
+    msg=[self fixMsg:msg type:LogTypeError];
+    NSLog(@"%@",msg);
     if (self.logDelegate!=nil) {
         if ([self.logDelegate respondsToSelector:@selector(onLogE:)]) {
             [self.logDelegate onLogE:msg];
@@ -168,8 +172,25 @@
 }
 
 
--(NSString*)fixMsg:(NSString*)msg{
+-(NSString*)fixMsg:(NSString*)msg type:(LogType)type{
     NSString *time=[STimeTool getNowTime:nil];
-    return NSStringFormat(@"[%@]-%@",time,msg);
+    NSString*logTypeStr=@"N";
+    switch (type) {
+        case LogTypeNormal:
+            logTypeStr=@"N";
+            break;
+        case LogTypeDebug:
+            logTypeStr=@"D";
+            break;
+        case LogTypeInfo:
+            logTypeStr=@"I";
+            break;
+        case LogTypeError:
+            logTypeStr=@"E";
+            break;
+        default:
+            break;
+    }
+    return NSStringFormat(@"[%@][%@] %@",logTypeStr,time,msg);
 }
 @end

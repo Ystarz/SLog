@@ -35,23 +35,39 @@ typedef enum{
 
 
 #define OCLOG(fmt, ...)    \
-(NSLog)((fmt), ##__VA_ARGS__);           \
 [[SLogManager sharedInstance] log:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
 
 
 #define OCLOGD(fmt, ...)            \
-(NSLog)((fmt), ##__VA_ARGS__);           \
 [[SLogManager sharedInstance] logD:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
 
 
 #define OCLOGE(fmt, ...)    \
-(NSLog)((fmt), ##__VA_ARGS__);           \
 [[SLogManager sharedInstance] logE:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
 
 
 #define OCLOGI(fmt, ...)    \
-(NSLog)((fmt), ##__VA_ARGS__);           \
 [[SLogManager sharedInstance] logI:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
+
+//把nslog放到log中
+//#define OCLOG(fmt, ...)    \
+//(NSLog)((fmt), ##__VA_ARGS__);           \
+//[[SLogManager sharedInstance] log:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
+//
+//
+//#define OCLOGD(fmt, ...)            \
+//(NSLog)((fmt), ##__VA_ARGS__);           \
+//[[SLogManager sharedInstance] logD:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
+//
+//
+//#define OCLOGE(fmt, ...)    \
+//(NSLog)((fmt), ##__VA_ARGS__);           \
+//[[SLogManager sharedInstance] logE:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
+//
+//
+//#define OCLOGI(fmt, ...)    \
+//(NSLog)((fmt), ##__VA_ARGS__);           \
+//[[SLogManager sharedInstance] logI:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
 
 
 @protocol SLogDelegate<NSObject>

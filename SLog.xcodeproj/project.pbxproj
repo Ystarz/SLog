@@ -711,6 +711,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A67FC267C8BB11C2466D4784 /* Pods-SLog.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7,
+					armv7s,
+				);
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -737,6 +742,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0AACD1512038E7BEF74CFC5B /* Pods-SLog.release.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7,
+					armv7s,
+				);
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
