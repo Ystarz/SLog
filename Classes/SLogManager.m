@@ -103,7 +103,13 @@
 
 
 -(NSString*)createLogDir{
-    NSString *documentDirectory = [[NSBundle mainBundle].bundlePath stringByDeletingLastPathComponent];
+     NSString *documentDirectory = @"";
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
+    documentDirectory =NSHomeDirectory();
+#elif TARGET_OS_MAC
+    documentDirectory = [[NSBundle mainBundle].bundlePath stringByDeletingLastPathComponent];
+#endif
+   
     NSString *logDir=[documentDirectory stringByAppendingPathComponent:@"log"];
     if (![SFileTool isDirExist:logDir]) {
         [SFileTool createDir:logDir];
