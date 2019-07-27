@@ -106,6 +106,7 @@
      NSString *documentDirectory = @"";
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
     documentDirectory =NSHomeDirectory();
+    documentDirectory=[documentDirectory stringByAppendingPathComponent:@"Documents"];
 #elif TARGET_OS_MAC
     documentDirectory = [[NSBundle mainBundle].bundlePath stringByDeletingLastPathComponent];
 #endif
