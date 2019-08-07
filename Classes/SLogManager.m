@@ -27,7 +27,20 @@
     });
     return sharedInstance;
 }
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    }
+    return self;
+}
+// 程序Crash后的处理函数
+void uncaughtExceptionHandler(NSException *exception)
+{
+    //[KKLog logCrash:exception];
+    [[SLogManager sharedInstance]logCrash:exception];
+}
 
 +(void)startWork{
     [SLogManager startWorkOnLogMode:LogModeNone ifCache:NO];

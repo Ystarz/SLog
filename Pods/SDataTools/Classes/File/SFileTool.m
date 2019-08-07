@@ -94,11 +94,15 @@
 
 
 +(bool)copyFile:(NSString*)filePath to:(NSString*)destinationPath isForce:(bool)force{
-    if ([SFileTool isFileExist:destinationPath]&&!force) {
-        return true;
+    if ([SFileTool isFileExist:destinationPath]) {
+        if (!force) {
+            return true;
+        }
+        [SFileTool deleteFile:destinationPath];
     }
-     NSFileManager *fileManager = [NSFileManager defaultManager];
-   return [fileManager copyItemAtPath:filePath toPath:destinationPath error:nil];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    return [fileManager copyItemAtPath:filePath toPath:destinationPath error:nil];
 }
 
 +(bool)deleteFile:(NSString*)path{
@@ -106,6 +110,16 @@
     BOOL isDir=false;
     if([fileManager fileExistsAtPath:path isDirectory:&isDir]){
        return [fileManager removeItemAtPath:path error:nil];
+    }
+    else{
+        return true;}
+}
+
++(bool)deleteDir:(NSString*)path{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL isDir=true;
+    if([fileManager fileExistsAtPath:path isDirectory:&isDir]){
+        return [fileManager removeItemAtPath:path error:nil];
     }
     else{
         return true;}
@@ -119,7 +133,14 @@
     
 }
 
-
++(NSArray*)getAllFileNameInDir:(NSString*)dir{
+    if(![SFileTool isDirExist:dir]){
+        return [NSArray new];
+    }
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    return [fileManager contentsOfDirectoryAtPath:dir error:nil];
+    
+}
 
 //+(NSString*)fileMD5:(NSString*)path
 //{

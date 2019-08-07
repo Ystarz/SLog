@@ -28,7 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 +(bool)moveFile:(NSString*)filePath to:(NSString*)destinationPath isForce:(bool)force;
 +(bool)renameAtPath:(NSString*)filePath to:(NSString*)destinationPath isForce:(bool)force;
 +(bool)deleteFile:(NSString*)path;
++(bool)deleteDir:(NSString*)path;
 
++(NSArray*)getAllFileNameInDir:(NSString*)dir;
 +(NSString*)fileMD5:(NSString*)path;
 
 +(long long) getFileBytes:(NSString *)path;

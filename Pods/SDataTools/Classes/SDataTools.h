@@ -27,7 +27,8 @@ FOUNDATION_EXPORT const unsigned char SToolsVersionString[];
 #import <Cocoa/Cocoa.h>
 //#import "../Mac/NSTask+TRTaskAdditions_termination.h"
 #import "NSTask+TRTaskAdditions_termination.h"
-
+//#import "../Mac/Proccess/SProccess.h"
+//#import "SProccess.h"
 //! Project version number for SDataToolsLib_Mac.
 FOUNDATION_EXPORT double SDataToolsLib_MacVersionNumber;
 
