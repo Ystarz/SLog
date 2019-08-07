@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSArray*)getAllFileNameInDir:(NSString*)dir;
 +(NSString*)fileMD5:(NSString*)path;
++(NSString *)fileSHA1:(NSString *)path;
 
 +(long long) getFileBytes:(NSString *)path;
 @end

@@ -29,11 +29,10 @@
 #else
 #   error "Unknown Apple platform"
 #endif
-    {
+    //上面情况都不符合,跑这个
         NSString*str=[SDataConvertTool DataToJsonString:object option:NSJSONWritingPrettyPrinted];
         str=[NSString removeNewline:str];
         return str;
-    }
 }
 
 

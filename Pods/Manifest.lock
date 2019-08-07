@@ -1,16 +1,16 @@
 PODS:
-  - SDataTools (0.3.2)
+  - SDataTools (0.3.3)
 
 DEPENDENCIES:
   - SDataTools
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - SDataTools
 
 SPEC CHECKSUMS:
-  SDataTools: 86354a48bf953787e6eb2c09b93243a95e1c3197
+  SDataTools: e8d7aee8ba9f9b36726328faf7b09f56862f971b
 
 PODFILE CHECKSUM: 6554c26a634e585f36276555fc32c77293764e09
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.0.beta.1

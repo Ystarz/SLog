@@ -109,7 +109,9 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL isDir=false;
     if([fileManager fileExistsAtPath:path isDirectory:&isDir]){
-       return [fileManager removeItemAtPath:path error:nil];
+        bool result= [fileManager removeItemAtPath:path error:nil];
+        sleep(0.5);
+        return result;
     }
     else{
         return true;}
@@ -119,18 +121,40 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL isDir=true;
     if([fileManager fileExistsAtPath:path isDirectory:&isDir]){
-        return [fileManager removeItemAtPath:path error:nil];
+        bool result=[fileManager removeItemAtPath:path error:nil];
+        sleep(0.5);
+        return result;
     }
     else{
         return true;}
 }
 
 +(NSString*)fileMD5:(NSString*)path
-
 {
-    
     return (__bridge_transfer NSString *)FileMD5HashCreateWithPath((__bridge CFStringRef)path, FileHashDefaultChunkSizeForReadingData);
-    
+}
+
++(NSString *)fileSHA1:(NSString *)path
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    // Make sure the file exists
+    if( [fileManager fileExistsAtPath:path isDirectory:nil] )
+    {
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        unsigned char digest[CC_SHA1_DIGEST_LENGTH];
+        CC_SHA1( data.bytes, (CC_LONG)data.length, digest );
+        NSMutableString *output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+        for( int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++ )
+        {
+            [output appendFormat:@"%02x", digest[i]];
+        }
+        
+        return output;
+    }
+    else
+    {
+        return @"";
+    }
 }
 
 +(NSArray*)getAllFileNameInDir:(NSString*)dir{
