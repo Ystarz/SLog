@@ -6,6 +6,7 @@ def commonPods #通用pods集
     # pod 'AFNetworking','~> 3.2.1'
     # pod 'Masonry'
     pod 'SDataTools'
+    pod 'CocoaLumberjack'
 end
 
 def  appOnlyPods #app专用pods集
@@ -16,12 +17,13 @@ def  extensionPods #扩展专用pods集
     pod 'GTSDKExtension'
 end
 
+commonPods
 
 target 'SLog' do
   # Comment the next line if you don't want to use dynamic frameworks
   platform :ios, '9.3'
   use_frameworks!
-  commonPods
+
   # Pods for SLog
 
   target 'SLogTests' do
@@ -35,7 +37,7 @@ end
 target "SLog_Mac" do
    platform :osx, '10.10'
   use_frameworks!
-  commonPods
+  # commonPods
 
    target 'SLog_MacTests' do
     inherit! :search_paths

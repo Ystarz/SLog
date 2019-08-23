@@ -27,17 +27,30 @@
 
 +(NSArray*)getTextArrFromFile:(NSString*)filePath{
     NSArray *fileData;
-    NSError *error;
-    
-    //读取file文件并把内容根据换行符分割后赋值给NSArray
-    fileData = [[NSString stringWithContentsOfFile:filePath
-                                          encoding:NSUTF8StringEncoding
-                                             error:&error]
-                componentsSeparatedByString:@"\n"];
+    fileData=[[SFileTool getStringFromFile:filePath]componentsSeparatedByString:@"\n"];
     return fileData;
+//    NSError *error;
+//
+//    //读取file文件并把内容根据换行符分割后赋值给NSArray
+//    fileData = [[NSString stringWithContentsOfFile:filePath
+//                                          encoding:NSUTF8StringEncoding
+//                                             error:&error]
+//                componentsSeparatedByString:@"\n"];
+//    return fileData;
     
     
     }
+
++(NSString*)getStringFromFile:(NSString*)filePath{
+    NSString *fileData;
+    NSError *error;
+    
+    //读取file文件并把内容根据换行符分割后赋值给NSArray
+    fileData = [NSString stringWithContentsOfFile:filePath
+                                          encoding:NSUTF8StringEncoding
+                                             error:&error];
+    return fileData;  
+}
 
 +(void) writeToFile:(NSString *)path contentArr:(NSArray *)arr{
 //    NSError *error = nil;

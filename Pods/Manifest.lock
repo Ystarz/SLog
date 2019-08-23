@@ -1,16 +1,23 @@
 PODS:
-  - SDataTools (0.3.3)
+  - CocoaLumberjack (3.5.3):
+    - CocoaLumberjack/Core (= 3.5.3)
+  - CocoaLumberjack/Core (3.5.3)
+  - SDataTools (0.3.8)
 
 DEPENDENCIES:
+  - CocoaLumberjack
   - SDataTools
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - SDataTools
+  trunk:
+    - CocoaLumberjack
 
 SPEC CHECKSUMS:
-  SDataTools: e8d7aee8ba9f9b36726328faf7b09f56862f971b
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  SDataTools: 8807b38d8a5ebacf3edde3e77bf7a2d00e16c0cb
 
-PODFILE CHECKSUM: 6554c26a634e585f36276555fc32c77293764e09
+PODFILE CHECKSUM: f51aa961f713f4860f1439ddbcb95395c3c1aebb
 
 COCOAPODS: 1.8.0.beta.1

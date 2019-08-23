@@ -7,10 +7,15 @@
 //
 
 #import "SLogManager.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
 //#import "KKLog.h"
-
+//old
 #define LOG_SAVE_TIMEINTERVAL 60*60 //单位s
+//new
+#define MAX_LOG_FILE_COUNT 1000
 
+//static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+static DDLogLevel ddLogLevel;
 @interface SLogManager()
 @property(strong,nonatomic)NSTimer*timer;
 @end
@@ -43,28 +48,60 @@ void uncaughtExceptionHandler(NSException *exception)
 }
 
 +(void)startWork{
-    [SLogManager startWorkOnLogMode:LogModeNone ifCache:NO];
+    [SLogManager startWorkOnLogMode:LogModeDebug ifCache:YES];
 }
 
 +(void)startWorkOnLogMode:(LogMode)type{
-    [SLogManager startWorkOnLogMode:type ifCache:NO];
+    [SLogManager startWorkOnLogMode:type ifCache:YES];
 }
 +(void)startWorkOnLogMode:(LogMode)type ifCache:(bool)localCache{
-    
+    //[[SLogManager sharedInstance]setCacheTime:60 * 60 * 24*30*6];
+    [SLogManager startWorkOnLogMode:type ifCache:localCache cacheTime:60 * 60 * 24*30*6];
+}
+
++(void)startWorkOnLogMode:(LogMode)type ifCache:(bool)localCache cacheTime:(int)time{
+    [[SLogManager sharedInstance]setCacheTime:time];
     [[SLogManager sharedInstance]setLogMode:type];
+    switch (type) {
+        case  LogModeDebug:
+            ddLogLevel=DDLogLevelAll;
+            break;
+        case LogModeRealease:
+            ddLogLevel=DDLogLevelInfo;
+            break;
+        case LogModeNone:
+            ddLogLevel=DDLogLevelOff;
+            break;
+    }
     [[SLogManager sharedInstance]setIsLocalCache:localCache];
     [[SLogManager sharedInstance]start];
 }
 
 #pragma mark 内部实现
 -(void)start{
+     //[DDLog addLogger:[DDTTYLogger sharedInstance]];
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
+    // iOS Simulator
+    // iOS device
+    if (@available(iOS 10.0, *)) {
+        [DDLog addLogger:[DDOSLogger sharedInstance]];
+    } else {
+        [DDLog addLogger:[DDTTYLogger sharedInstance]];
+        // Fallback on earlier versions
+    }
+#elif TARGET_OS_MAC
+    if (@available(macOS 10.12, *)) {
+        [DDLog addLogger:[DDOSLogger sharedInstance]];
+    } else {
+        [DDLog addLogger:[DDTTYLogger sharedInstance]];
+        // Fallback on earlier versions
+    }
+#endif
+    
     if (self.isLocalCache) {
         // 开始保存日志文件
-        [self saveLogToLocal];
-        //定义计时器
-        self.timer=[NSTimer timerWithTimeInterval:LOG_SAVE_TIMEINTERVAL target:self selector:@selector(timeUpdate) userInfo:nil repeats:true];
-        //开启计时器
-        [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        //[self saveLogToLocal];
+        [self saveLogToLocalWithDD];
     }
 //#if !DEBUG
 //    // 开始保存日志文件
@@ -82,6 +119,14 @@ void uncaughtExceptionHandler(NSException *exception)
 
 - (void)saveLogToLocal
 {
+    //销毁旧的计时器
+    if (self.timer) {
+        [self.timer invalidate];
+    }
+    //定义计时器
+    self.timer=[NSTimer timerWithTimeInterval:LOG_SAVE_TIMEINTERVAL target:self selector:@selector(timeUpdate) userInfo:nil repeats:true];
+    //开启计时器
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
    NSString *documentDirectory = [self createLogDir];
     if (!documentDirectory) {
         OCLOG(@"日志目录创建失败/fail to create log dir");
@@ -94,7 +139,19 @@ void uncaughtExceptionHandler(NSException *exception)
         // 将log输入到文件
         freopen([logFilePath cStringUsingEncoding:NSUTF8StringEncoding],"a+", stdout);
         freopen([logFilePath cStringUsingEncoding:NSUTF8StringEncoding],"a+", stderr);
+        
+        //fopen([logFilePath cStringUsingEncoding:NSUTF8StringEncoding], stdout);
+//        freopen("CON","r",stdin);
+//        freopen("CON","w",stdout);
     }
+}
+
+- (void)saveLogToLocalWithDD
+{
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
+    fileLogger.rollingFrequency = self.cacheTime;//60 * 60 * 24*30*6; // half-year rolling
+    fileLogger.logFileManager.maximumNumberOfLogFiles = MAX_LOG_FILE_COUNT;
+    [DDLog addLogger:fileLogger];
 }
 
 -(void)logCrash:(NSException *)exception{
@@ -123,7 +180,9 @@ void uncaughtExceptionHandler(NSException *exception)
 #elif TARGET_OS_MAC
     documentDirectory = [[NSBundle mainBundle].bundlePath stringByDeletingLastPathComponent];
 #endif
-   
+    if (![NSString isNull:self.rootPath]) {
+        documentDirectory=self.rootPath;
+    }
     NSString *logDir=[documentDirectory stringByAppendingPathComponent:@"log"];
     if (![SFileTool isDirExist:logDir]) {
         [SFileTool createDir:logDir];

@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(long long) getFileSizeAtPath:(NSString *)path;
 +(NSArray*)getTextArrFromFile:(NSString*)filePath;
++(NSString*)getStringFromFile:(NSString*)filePath;
 +(void) writeToFile:(NSString *)path contentArr:(NSArray *)arr;
 +(bool)createDir:(NSString*)path;
 +(bool)isFileExist:(NSString*)path;

@@ -79,6 +79,8 @@ typedef enum{
 
 @interface SLogManager : NSObject
 @property(weak,nonatomic)id<SLogDelegate> logDelegate;
+@property(strong,nonatomic)NSString* rootPath;
+@property(assign,nonatomic)int cacheTime;
 @property(assign,nonatomic)bool isLocalCache;
 @property(assign,nonatomic)LogMode logMode;
 //@property(assign,nonatomic)bool isXcodePrint;
@@ -86,6 +88,7 @@ typedef enum{
 +(void)startWork;
 +(void)startWorkOnLogMode:(LogMode)type;
 +(void)startWorkOnLogMode:(LogMode)type ifCache:(bool)localCache;
++(void)startWorkOnLogMode:(LogMode)type ifCache:(bool)localCache cacheTime:(int)time;
 +(instancetype)sharedInstance;
 -(void)log:(NSString*)msg;
 -(void)logD:(NSString*)msg;
