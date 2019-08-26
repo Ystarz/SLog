@@ -167,7 +167,8 @@ void uncaughtExceptionHandler(NSException *exception)
 
     NSString *content = [[NSString stringWithFormat:@"CRASH: %@\n", exception] stringByAppendingString:[NSString stringWithFormat:@"Stack Trace: %@\n", [exception callStackSymbols]]];
     
-    OCLOG(@"%@",content);
+    //OCLOG(@"%@",content);
+    DDLogError(@"%@",content);
    //[content writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
 }
 
@@ -198,7 +199,8 @@ void uncaughtExceptionHandler(NSException *exception)
         return;
     }
     msg=[self fixMsg:msg type:LogTypeNormal];
-    NSLog(@"%@",msg);
+//    NSLog(@"%@",msg);
+    DDLogInfo(@"%@",msg);
     if (self.logDelegate!=nil) {
         if ([self.logDelegate respondsToSelector:@selector(onLog:)]) {
              [self.logDelegate onLog:msg];
@@ -212,7 +214,8 @@ void uncaughtExceptionHandler(NSException *exception)
         return;
     }
     msg=[self fixMsg:msg type:LogTypeDebug];
-    NSLog(@"%@",msg);
+//    NSLog(@"%@",msg);
+    DDLogDebug(@"%@",msg);
     if (self.logDelegate!=nil) {
         //OCLOG(@"You0");
         if ([self.logDelegate respondsToSelector:@selector(onLogD:)]) {
@@ -227,7 +230,8 @@ void uncaughtExceptionHandler(NSException *exception)
         return;
     }
     msg=[self fixMsg:msg type:LogTypeInfo];
-    NSLog(@"%@",msg);
+//    NSLog(@"%@",msg);
+    DDLogInfo(@"%@",msg);
     if (self.logDelegate!=nil) {
         if ([self.logDelegate respondsToSelector:@selector(onLogI:)]) {
             [self.logDelegate onLogI:msg];
@@ -241,7 +245,8 @@ void uncaughtExceptionHandler(NSException *exception)
         return;
     }
     msg=[self fixMsg:msg type:LogTypeError];
-    NSLog(@"%@",msg);
+//    NSLog(@"%@",msg);
+    DDLogWarn(@"%@",msg);
     if (self.logDelegate!=nil) {
         if ([self.logDelegate respondsToSelector:@selector(onLogE:)]) {
             [self.logDelegate onLogE:msg];
