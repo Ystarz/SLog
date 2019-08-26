@@ -23,7 +23,7 @@
 typedef enum{
     LogTypeNormal=1<<0,
     LogTypeDebug=1<<1,
-    LogTypeInfo=1<<2,
+    LogTypeWarn=1<<2,
     LogTypeError=1<<3,
 } LogType;
 
@@ -46,8 +46,8 @@ typedef enum{
 [[SLogManager sharedInstance] logE:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
 
 
-#define OCLOGI(fmt, ...)    \
-[[SLogManager sharedInstance] logI:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
+#define OCLOGW(fmt, ...)    \
+[[SLogManager sharedInstance] logW:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
 
 //把nslog放到log中
 //#define OCLOG(fmt, ...)    \
@@ -65,15 +65,15 @@ typedef enum{
 //[[SLogManager sharedInstance] logE:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
 //
 //
-//#define OCLOGI(fmt, ...)    \
+//#define OCLOG(fmt, ...)    \
 //(NSLog)((fmt), ##__VA_ARGS__);           \
-//[[SLogManager sharedInstance] logI:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
+//[[SLogManager sharedInstance] logW:[NSString stringWithFormat:fmt,##__VA_ARGS__]]
 
 
 @protocol SLogDelegate<NSObject>
 -(void)onLog:(NSString*) msg;
 -(void)onLogD:(NSString*) msg;
--(void)onLogI:(NSString*) msg;
+-(void)onLogW:(NSString*) msg;
 -(void)onLogE:(NSString*) msg;
 @end
 
@@ -92,7 +92,7 @@ typedef enum{
 +(instancetype)sharedInstance;
 -(void)log:(NSString*)msg;
 -(void)logD:(NSString*)msg;
--(void)logI:(NSString*)msg;
+-(void)logW:(NSString*)msg;
 -(void)logE:(NSString*)msg;
 -(void)logCrash:(NSException *)exception;
 @end

@@ -80,24 +80,36 @@ void uncaughtExceptionHandler(NSException *exception)
 
 #pragma mark 内部实现
 -(void)start{
+    //DDOSLogger好像不能改颜色
      //[DDLog addLogger:[DDTTYLogger sharedInstance]];
-#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-    // iOS Simulator
-    // iOS device
-    if (@available(iOS 10.0, *)) {
-        [DDLog addLogger:[DDOSLogger sharedInstance]];
-    } else {
-        [DDLog addLogger:[DDTTYLogger sharedInstance]];
-        // Fallback on earlier versions
-    }
-#elif TARGET_OS_MAC
-    if (@available(macOS 10.12, *)) {
-        [DDLog addLogger:[DDOSLogger sharedInstance]];
-    } else {
-        [DDLog addLogger:[DDTTYLogger sharedInstance]];
-        // Fallback on earlier versions
-    }
-#endif
+//#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
+//    // iOS Simulator
+//    // iOS device
+//    if (@available(iOS 10.0, *)) {
+//        [DDLog addLogger:[DDOSLogger sharedInstance]];
+//        [DDOSLogger sharedInstance]
+//    } else {
+//        [DDLog addLogger:[DDTTYLogger sharedInstance]];
+//         [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+//        // Fallback on earlier versions
+//    }
+//#elif TARGET_OS_MAC
+//    if (@available(macOS 10.12, *)) {
+//        [DDLog addLogger:[DDOSLogger sharedInstance]];
+//    } else {
+//        [DDLog addLogger:[DDTTYLogger sharedInstance]];
+//         [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+//        // Fallback on earlier versions
+//    }
+//#endif
+   
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+//    [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor blueColor] backgroundColor:[DDColor clearColor] forFlag:DDLogFlagDebug];// 可以修改你想要的颜色
+//
+    //[DDLog addLogger:[DDASLLogger sharedInstance]];//这个好像是xcode的控制台..终端没打日志//Apple系统日志..
+    //[[DDASLLogger sharedInstance]changeColor:nil];
     
     if (self.isLocalCache) {
         // 开始保存日志文件
@@ -211,6 +223,8 @@ void uncaughtExceptionHandler(NSException *exception)
     msg=[self fixMsg:msg type:LogTypeNormal];
 //    NSLog(@"%@",msg);
     DDLogInfo(@"%@",msg);
+   // DDLogInfo(@"echo -e \"\\033[37m%@\\033[0m\"",msg);
+    
     if (self.logDelegate!=nil) {
         if ([self.logDelegate respondsToSelector:@selector(onLog:)]) {
              [self.logDelegate onLog:msg];
@@ -225,7 +239,8 @@ void uncaughtExceptionHandler(NSException *exception)
     }
     msg=[self fixMsg:msg type:LogTypeDebug];
 //    NSLog(@"%@",msg);
-    DDLogDebug(@"%@",msg);
+     DDLogDebug(@"%@",msg);
+//    DDLogDebug(@"echo -e \"\\033[32m%@\\033[0m\"",msg);
     if (self.logDelegate!=nil) {
         //OCLOG(@"You0");
         if ([self.logDelegate respondsToSelector:@selector(onLogD:)]) {
@@ -235,16 +250,18 @@ void uncaughtExceptionHandler(NSException *exception)
     }
 }
 
--(void)logI:(NSString*)msg{
+-(void)logW:(NSString*)msg{
     if (self.logMode==LogModeNone) {
         return;
     }
-    msg=[self fixMsg:msg type:LogTypeInfo];
+    msg=[self fixMsg:msg type:LogTypeWarn];
 //    NSLog(@"%@",msg);
-    DDLogInfo(@"%@",msg);
+    DDLogWarn(@"%@",msg);
+   //DDLogWarn(@"\\033[33m%@\\033[0m",msg);
+    
     if (self.logDelegate!=nil) {
-        if ([self.logDelegate respondsToSelector:@selector(onLogI:)]) {
-            [self.logDelegate onLogI:msg];
+        if ([self.logDelegate respondsToSelector:@selector(onLogW:)]) {
+            [self.logDelegate onLogW:msg];
         }
         
     }
@@ -256,7 +273,8 @@ void uncaughtExceptionHandler(NSException *exception)
     }
     msg=[self fixMsg:msg type:LogTypeError];
 //    NSLog(@"%@",msg);
-    DDLogWarn(@"%@",msg);
+    DDLogError(@"%@",msg);
+    //DDLogError(@"\\033[31m%@\\033[0m",msg);
     if (self.logDelegate!=nil) {
         if ([self.logDelegate respondsToSelector:@selector(onLogE:)]) {
             [self.logDelegate onLogE:msg];
@@ -269,22 +287,30 @@ void uncaughtExceptionHandler(NSException *exception)
 -(NSString*)fixMsg:(NSString*)msg type:(LogType)type{
     NSString *time=[STimeTool getNowTime:nil];
     NSString*logTypeStr=@"N";
+    NSString*prefix=@"";
     switch (type) {
         case LogTypeNormal:
             logTypeStr=@"N";
+            //prefix=NSStringFormat(@"\\033[37m[%@][%@]\\033[0m",logTypeStr,time);
             break;
         case LogTypeDebug:
             logTypeStr=@"D";
+            //prefix=NSStringFormat(@"\\033[32m[%@][%@]\\033[0m",logTypeStr,time);
             break;
-        case LogTypeInfo:
-            logTypeStr=@"I";
+        case LogTypeWarn:
+            logTypeStr=@"W";
+            //prefix=NSStringFormat(@"\\033[32m[%@][%@]\\033[0m",logTypeStr,time);
             break;
         case LogTypeError:
             logTypeStr=@"E";
+            //prefix=NSStringFormat(@"\\033[31m[%@][%@]\\033[0m",logTypeStr,time);
             break;
         default:
             break;
     }
+    
     return NSStringFormat(@"[%@][%@] %@",logTypeStr,time,msg);
+    //return NSStringFormat(@"%@ %@",prefix,msg);
+    
 }
 @end
