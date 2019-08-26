@@ -8,6 +8,7 @@
 
 #import "SLogManager.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import "DDCMDFileLogger.h"
 //#import "KKLog.h"
 //old
 #define LOG_SAVE_TIMEINTERVAL 60*60 //单位s
@@ -101,7 +102,7 @@ void uncaughtExceptionHandler(NSException *exception)
     if (self.isLocalCache) {
         // 开始保存日志文件
         //[self saveLogToLocal];
-        [self saveLogToLocalWithDD];
+        [self saveLogToLocalWithDDFix];
     }
 //#if !DEBUG
 //    // 开始保存日志文件
@@ -150,6 +151,15 @@ void uncaughtExceptionHandler(NSException *exception)
 {
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
     fileLogger.rollingFrequency = self.cacheTime;//60 * 60 * 24*30*6; // half-year rolling
+    fileLogger.logFileManager.maximumNumberOfLogFiles = MAX_LOG_FILE_COUNT;
+    [DDLog addLogger:fileLogger];
+}
+
+- (void)saveLogToLocalWithDDFix
+{
+    
+    DDCMDFileLogger *fileLogger = [[DDCMDFileLogger alloc] init]; // File Logger
+    fileLogger.rollingFrequency = self.cacheTime;
     fileLogger.logFileManager.maximumNumberOfLogFiles = MAX_LOG_FILE_COUNT;
     [DDLog addLogger:fileLogger];
 }
