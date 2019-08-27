@@ -103,9 +103,14 @@ void uncaughtExceptionHandler(NSException *exception)
 //    }
 //#endif
    
-    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    //[[DDTTYLogger sharedInstance] setColorsEnabled:YES];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor greenColor] backgroundColor:nil forFlag:DDLogFlagDebug];// 可以修改你想要的颜色
+    [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor blueColor] backgroundColor:nil forFlag:DDLogFlagInfo];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor yellowColor] backgroundColor:nil forFlag:DDLogFlagWarning];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor redColor] backgroundColor:nil forFlag:DDLogFlagError];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor brownColor] backgroundColor:nil forFlag:DDLogFlagVerbose];
 //    [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor blueColor] backgroundColor:[DDColor clearColor] forFlag:DDLogFlagDebug];// 可以修改你想要的颜色
 //
     //[DDLog addLogger:[DDASLLogger sharedInstance]];//这个好像是xcode的控制台..终端没打日志//Apple系统日志..
@@ -285,9 +290,10 @@ void uncaughtExceptionHandler(NSException *exception)
 
 
 -(NSString*)fixMsg:(NSString*)msg type:(LogType)type{
-    NSString *time=[STimeTool getNowTime:nil];
+    //NSString *time=[STimeTool getNowTime:nil];
+    //NSString *time=@"";
     NSString*logTypeStr=@"N";
-    //NSString*prefix=@"";
+    NSString*prefix=@"";
     switch (type) {
         case LogTypeNormal:
             logTypeStr=@"N";
@@ -309,7 +315,8 @@ void uncaughtExceptionHandler(NSException *exception)
             break;
     }
     
-    return NSStringFormat(@"[%@][%@] %@",logTypeStr,time,msg);
+    return NSStringFormat(@"[%@] %@",logTypeStr,msg);
+    //return NSStringFormat(@"[%@][%@] %@",logTypeStr,time,msg);
     //return NSStringFormat(@"%@ %@",prefix,msg);
     
 }
