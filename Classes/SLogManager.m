@@ -293,7 +293,7 @@ void uncaughtExceptionHandler(NSException *exception)
     //NSString *time=[STimeTool getNowTime:nil];
     //NSString *time=@"";
     NSString*logTypeStr=@"N";
-    NSString*prefix=@"";
+    //NSString*prefix=@"";
     switch (type) {
         case LogTypeNormal:
             logTypeStr=@"N";
