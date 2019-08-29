@@ -82,6 +82,7 @@ typedef enum{
 @property(strong,nonatomic)NSString* rootPath;
 @property(assign,nonatomic)int cacheTime;
 @property(assign,nonatomic)bool isLocalCache;
+@property(assign,nonatomic)bool isErrorInfoCacheAlone;
 @property(assign,nonatomic)LogMode logMode;
 //@property(assign,nonatomic)bool isXcodePrint;
 

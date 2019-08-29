@@ -1,5 +1,5 @@
 //
-//  DDCMDFileLogger.h
+//  SFileLogger.h
 //  CMD-SLogTest
 //
 //  Created by SSS on 2019/8/26.
@@ -10,11 +10,11 @@
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@interface DDLogCMDFileManagerDefault:DDLogFileManagerDefault
+@interface SFileManagerDefault:DDLogFileManagerDefault
 
 @end
 
-@interface DDCMDFileLogger : DDFileLogger
+@interface SFileLogger : DDFileLogger
 
 @end
 

@@ -8,7 +8,8 @@
 
 #import "SLogManager.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
-#import "DDCMDFileLogger.h"
+#import "SFileLogger.h"
+#import "SErrorFileLogger.h"
 //#import "KKLog.h"
 //old
 #define LOG_SAVE_TIMEINTERVAL 60*60 //单位s
@@ -131,11 +132,11 @@ void uncaughtExceptionHandler(NSException *exception)
 //#endif
 }
 
--(void)timeUpdate{
+-(void)timeUpdate __attribute__((deprecated("不推荐使用,旧版的日志存储计时器,无法同时兼容显示log的需求"))){
     [self saveLogToLocal];
 }
 
-- (void)saveLogToLocal
+- (void)saveLogToLocal __attribute__((deprecated("不推荐使用,旧版的日志存储,无法同时兼容显示log的需求")))
 {
     //销毁旧的计时器
     if (self.timer) {
@@ -164,22 +165,51 @@ void uncaughtExceptionHandler(NSException *exception)
     }
 }
 
-- (void)saveLogToLocalWithDD
+- (void)saveLogToLocalWithDD __attribute__((deprecated("不推荐使用,使用cocojack原生的日志存储类")))
 {
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
     fileLogger.rollingFrequency = self.cacheTime;//60 * 60 * 24*30*6; // half-year rolling
     fileLogger.logFileManager.maximumNumberOfLogFiles = MAX_LOG_FILE_COUNT;
     [DDLog addLogger:fileLogger];
+    //DDLog addLogger:<#(nonnull id<DDLogger>)#> withLevel:<#(DDLogLevel)#>
 }
 
 - (void)saveLogToLocalWithDDFix
 {
     
-    DDCMDFileLogger *fileLogger = [[DDCMDFileLogger alloc] init]; // File Logger
+    SFileLogger *fileLogger = [[SFileLogger alloc] init]; // File Logger
     fileLogger.rollingFrequency = self.cacheTime;
     fileLogger.logFileManager.maximumNumberOfLogFiles = MAX_LOG_FILE_COUNT;
     [DDLog addLogger:fileLogger];
 }
+
+- (void)setIsErrorInfoCacheAlone:(bool)isErrorInfoCacheAlone{
+    if (isErrorInfoCacheAlone) {
+        for (NSObject*logger in DDLog.allLoggers) {
+            if ([logger isKindOfClass:[SErrorFileLogger class]]) {
+                //[DDLog removeLogger:(SErrorFileLogger*)logger];
+                //如果已经有旧的,就不再需要
+                return;
+            }
+        }
+        SErrorFileLogger *fileLogger = [[SErrorFileLogger alloc] init]; // File Logger
+        fileLogger.rollingFrequency = self.cacheTime;
+        fileLogger.logFileManager.maximumNumberOfLogFiles = MAX_LOG_FILE_COUNT;
+        [DDLog addLogger:fileLogger withLevel:DDLogLevelError];
+    }
+    else{
+        //移除旧的
+        for (NSObject*logger in DDLog.allLoggers) {
+            if ([logger isKindOfClass:[SErrorFileLogger class]]) {
+                [DDLog removeLogger:(SErrorFileLogger*)logger];
+                break;
+            }
+        }
+    }
+  
+    _isErrorInfoCacheAlone=isErrorInfoCacheAlone;
+}
+
 
 -(void)logCrash:(NSException *)exception{
     if (nil == exception)

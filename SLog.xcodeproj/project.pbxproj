@@ -14,10 +14,14 @@
 		18207A8822B77EE20003688E /* SLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 18207A7A22B77EE20003688E /* SLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18207A9C22B78C5A0003688E /* SLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18207A9A22B78C5A0003688E /* SLogManager.m */; };
 		185D8D8822B8DB47006E53AB /* SLogManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185D8D8722B8DB47006E53AB /* SLogManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18CC877D2313BE0C00333595 /* DDCMDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC877A2313BE0C00333595 /* DDCMDFileLogger.m */; };
-		18CC87802313BFC500333595 /* DDCMDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC877A2313BE0C00333595 /* DDCMDFileLogger.m */; };
-		18CC87812313C03000333595 /* DDCMDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 18CC87792313BE0C00333595 /* DDCMDFileLogger.h */; };
-		18CC87822313C03000333595 /* DDCMDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 18CC87792313BE0C00333595 /* DDCMDFileLogger.h */; };
+		18A342EE23177BAC00ECA7A1 /* SErrorFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A342EC23177BAC00ECA7A1 /* SErrorFileLogger.h */; };
+		18A342EF23177BAC00ECA7A1 /* SErrorFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A342EC23177BAC00ECA7A1 /* SErrorFileLogger.h */; };
+		18A342F023177BAC00ECA7A1 /* SErrorFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A342ED23177BAC00ECA7A1 /* SErrorFileLogger.m */; };
+		18A342F123177BAC00ECA7A1 /* SErrorFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A342ED23177BAC00ECA7A1 /* SErrorFileLogger.m */; };
+		18CC877D2313BE0C00333595 /* SFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC877A2313BE0C00333595 /* SFileLogger.m */; };
+		18CC87802313BFC500333595 /* SFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC877A2313BE0C00333595 /* SFileLogger.m */; };
+		18CC87812313C03000333595 /* SFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 18CC87792313BE0C00333595 /* SFileLogger.h */; };
+		18CC87822313C03000333595 /* SFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 18CC87792313BE0C00333595 /* SFileLogger.h */; };
 		18EB05F122C3BD9300434EE0 /* SLog_MacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB05F022C3BD9300434EE0 /* SLog_MacTests.m */; };
 		18EB05F322C3BD9300434EE0 /* SLog_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181F91B522C3872F00903629 /* SLog_Mac.framework */; };
 		18EB068622C45AC500434EE0 /* SLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18207A9A22B78C5A0003688E /* SLogManager.m */; };
@@ -58,8 +62,10 @@
 		18207A8722B77EE20003688E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18207A9A22B78C5A0003688E /* SLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLogManager.m; sourceTree = "<group>"; };
 		185D8D8722B8DB47006E53AB /* SLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLogManager.h; sourceTree = "<group>"; };
-		18CC87792313BE0C00333595 /* DDCMDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCMDFileLogger.h; sourceTree = "<group>"; };
-		18CC877A2313BE0C00333595 /* DDCMDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCMDFileLogger.m; sourceTree = "<group>"; };
+		18A342EC23177BAC00ECA7A1 /* SErrorFileLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SErrorFileLogger.h; sourceTree = "<group>"; };
+		18A342ED23177BAC00ECA7A1 /* SErrorFileLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SErrorFileLogger.m; sourceTree = "<group>"; };
+		18CC87792313BE0C00333595 /* SFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFileLogger.h; sourceTree = "<group>"; };
+		18CC877A2313BE0C00333595 /* SFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFileLogger.m; sourceTree = "<group>"; };
 		18EB05EE22C3BD9300434EE0 /* SLog_MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLog_MacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EB05F022C3BD9300434EE0 /* SLog_MacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLog_MacTests.m; sourceTree = "<group>"; };
 		18EB05F222C3BD9300434EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,11 +177,13 @@
 		18207A7922B77EE20003688E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				18CC87792313BE0C00333595 /* DDCMDFileLogger.h */,
-				18CC877A2313BE0C00333595 /* DDCMDFileLogger.m */,
+				18CC87792313BE0C00333595 /* SFileLogger.h */,
+				18CC877A2313BE0C00333595 /* SFileLogger.m */,
 				18207A7A22B77EE20003688E /* SLog.h */,
 				185D8D8722B8DB47006E53AB /* SLogManager.h */,
 				18207A9A22B78C5A0003688E /* SLogManager.m */,
+				18A342EC23177BAC00ECA7A1 /* SErrorFileLogger.h */,
+				18A342ED23177BAC00ECA7A1 /* SErrorFileLogger.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -216,7 +224,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CC87812313C03000333595 /* DDCMDFileLogger.h in Headers */,
+				18CC87812313C03000333595 /* SFileLogger.h in Headers */,
+				18A342EF23177BAC00ECA7A1 /* SErrorFileLogger.h in Headers */,
 				181F91BD22C3874200903629 /* SLogManager.h in Headers */,
 				18EB068722C45B5C00434EE0 /* SLog.h in Headers */,
 			);
@@ -226,7 +235,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CC87822313C03000333595 /* DDCMDFileLogger.h in Headers */,
+				18CC87822313C03000333595 /* SFileLogger.h in Headers */,
+				18A342EE23177BAC00ECA7A1 /* SErrorFileLogger.h in Headers */,
 				18207A8822B77EE20003688E /* SLog.h in Headers */,
 				185D8D8822B8DB47006E53AB /* SLogManager.h in Headers */,
 			);
@@ -499,8 +509,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CC87802313BFC500333595 /* DDCMDFileLogger.m in Sources */,
+				18CC87802313BFC500333595 /* SFileLogger.m in Sources */,
 				18EB068622C45AC500434EE0 /* SLogManager.m in Sources */,
+				18A342F123177BAC00ECA7A1 /* SErrorFileLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,8 +519,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CC877D2313BE0C00333595 /* DDCMDFileLogger.m in Sources */,
+				18CC877D2313BE0C00333595 /* SFileLogger.m in Sources */,
 				18207A9C22B78C5A0003688E /* SLogManager.m in Sources */,
+				18A342F023177BAC00ECA7A1 /* SErrorFileLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
