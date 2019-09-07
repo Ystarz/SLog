@@ -316,6 +316,7 @@ void uncaughtExceptionHandler(NSException *exception)
         }
         
     }
+    DDLogError(@"\n\n");
 }
 
 

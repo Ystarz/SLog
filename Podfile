@@ -41,6 +41,8 @@ target "SLog_Mac" do
 
    target 'SLog_MacTests' do
     inherit! :search_paths
+    platform :osx, '10.10'
+  use_frameworks!
     # Pods for testing
   end
 end

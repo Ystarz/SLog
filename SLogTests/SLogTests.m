@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 //#import "SLog.h"
-#define OC_LOG
+//#define OC_LOG
 @interface SLogTests : XCTestCase
 
 @end
@@ -33,6 +33,8 @@
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
+//        [SLogManager startWorkOnLogMode:LogModeDebug ifCache:YES];//本地缓存所有日志
+//        [[SLogManager sharedInstance]setIsErrorInfoCacheAlone:YES];//开启错误日志单独存储
     }];
 }
 

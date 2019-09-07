@@ -51,9 +51,12 @@
     
     if (dateFormatter == nil) {
         dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
+        //[dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
         [dateFormatter setDateFormat:dateFormat];
-        [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+//        [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+         [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+//        [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:3600*8]];//这才是中国时区
+        //dateFormatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];//这也是中国时区
         dictionary[key] = dateFormatter;
     }
     
