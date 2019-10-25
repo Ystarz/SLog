@@ -157,11 +157,11 @@ void uncaughtExceptionHandler(NSException *exception)
     }
 }
 
--(void)timeUpdate __attribute__((deprecated("不推荐使用,旧版的日志存储计时器,无法同时兼容显示log的需求"))){
+-(void)timeUpdate{
     [self saveLogToLocal];
 }
 
-- (void)saveLogToLocal __attribute__((deprecated("不推荐使用,旧版的日志存储,无法同时兼容显示log的需求")))
+- (void)saveLogToLocal
 {
     //销毁旧的计时器
     if (self.timer) {
@@ -171,7 +171,7 @@ void uncaughtExceptionHandler(NSException *exception)
     self.timer=[NSTimer timerWithTimeInterval:LOG_SAVE_TIMEINTERVAL target:self selector:@selector(timeUpdate) userInfo:nil repeats:true];
     //开启计时器
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-   NSString *documentDirectory = [self createLogDir];
+    NSString *documentDirectory = [self createLogDir];
     if (!documentDirectory) {
         OCLOG(@"日志目录创建失败/fail to create log dir");
         return;
@@ -185,10 +185,43 @@ void uncaughtExceptionHandler(NSException *exception)
         freopen([logFilePath cStringUsingEncoding:NSUTF8StringEncoding],"a+", stderr);
         
         //fopen([logFilePath cStringUsingEncoding:NSUTF8StringEncoding], stdout);
-//        freopen("CON","r",stdin);
-//        freopen("CON","w",stdout);
+        //        freopen("CON","r",stdin);
+        //        freopen("CON","w",stdout);
     }
 }
+
+//-(void)timeUpdate __attribute__((deprecated("不推荐使用,旧版的日志存储计时器,无法同时兼容显示log的需求"))){
+//    [self saveLogToLocal];
+//}
+//
+//- (void)saveLogToLocal __attribute__((deprecated("不推荐使用,旧版的日志存储,无法同时兼容显示log的需求")))
+//{
+//    //销毁旧的计时器
+//    if (self.timer) {
+//        [self.timer invalidate];
+//    }
+//    //定义计时器
+//    self.timer=[NSTimer timerWithTimeInterval:LOG_SAVE_TIMEINTERVAL target:self selector:@selector(timeUpdate) userInfo:nil repeats:true];
+//    //开启计时器
+//    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+//   NSString *documentDirectory = [self createLogDir];
+//    if (!documentDirectory) {
+//        OCLOG(@"日志目录创建失败/fail to create log dir");
+//        return;
+//    }
+//    else{
+//        NSString*timeString= [STimeTool getNowTime:nil];
+//        NSString *fileName = [NSString stringWithFormat:@"%@.log",timeString];//注意不是NSData!
+//        NSString *logFilePath = [documentDirectory stringByAppendingPathComponent:fileName];
+//        // 将log输入到文件
+//        freopen([logFilePath cStringUsingEncoding:NSUTF8StringEncoding],"a+", stdout);
+//        freopen([logFilePath cStringUsingEncoding:NSUTF8StringEncoding],"a+", stderr);
+//
+//        //fopen([logFilePath cStringUsingEncoding:NSUTF8StringEncoding], stdout);
+////        freopen("CON","r",stdin);
+////        freopen("CON","w",stdout);
+//    }
+//}
 
 - (void)saveLogToLocalWithDD __attribute__((deprecated("不推荐使用,使用cocojack原生的日志存储类")))
 {

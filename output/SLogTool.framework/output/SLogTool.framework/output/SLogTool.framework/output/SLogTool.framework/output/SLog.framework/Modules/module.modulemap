@@ -1,0 +1,6 @@
+framework module SLog {
+  umbrella header "SLog.h"
+
+  export *
+  module * { export * }
+}
