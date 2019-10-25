@@ -79,6 +79,12 @@ void uncaughtExceptionHandler(NSException *exception)
     [[SLogManager sharedInstance]start];
 }
 
++(void)startWork2OnLogMode:(LogMode)type ifCache:(bool)localCache{
+    [[SLogManager sharedInstance]setLogMode:type];
+      [[SLogManager sharedInstance]setIsLocalCache:localCache];
+    [[SLogManager sharedInstance]start2];
+}
+
 #pragma mark 内部实现
 -(void)start{
     //DDOSLogger好像不能改颜色
@@ -108,8 +114,15 @@ void uncaughtExceptionHandler(NSException *exception)
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
     [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor greenColor] backgroundColor:nil forFlag:DDLogFlagDebug];// 可以修改你想要的颜色
-    [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor blueColor] backgroundColor:nil forFlag:DDLogFlagInfo];
+#if TARGET_OS_IPHONE
+   [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor blueColor] backgroundColor:nil forFlag:DDLogFlagInfo];
     [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor yellowColor] backgroundColor:nil forFlag:DDLogFlagWarning];
+#else
+   [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor systemBlueColor] backgroundColor:nil forFlag:DDLogFlagInfo];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor systemYellowColor] backgroundColor:nil forFlag:DDLogFlagWarning];
+#endif
+    
+    
     [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor redColor] backgroundColor:nil forFlag:DDLogFlagError];
     [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor brownColor] backgroundColor:nil forFlag:DDLogFlagVerbose];
 //    [[DDTTYLogger sharedInstance] setForegroundColor:[DDColor blueColor] backgroundColor:[DDColor clearColor] forFlag:DDLogFlagDebug];// 可以修改你想要的颜色
@@ -130,6 +143,18 @@ void uncaughtExceptionHandler(NSException *exception)
 //    //开启计时器
 //    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 //#endif
+}
+
+-(void)start2{
+    if (self.isLocalCache) {
+        // 开始保存日志文件
+        // 开始保存日志文件
+        [self saveLogToLocal];
+        //定义计时器
+        self.timer=[NSTimer timerWithTimeInterval:LOG_SAVE_TIMEINTERVAL target:self selector:@selector(timeUpdate) userInfo:nil repeats:true];
+        //开启计时器
+        [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    }
 }
 
 -(void)timeUpdate __attribute__((deprecated("不推荐使用,旧版的日志存储计时器,无法同时兼容显示log的需求"))){
@@ -346,7 +371,7 @@ void uncaughtExceptionHandler(NSException *exception)
             break;
     }
     
-    return NSStringFormat(@"[%@] %@",logTypeStr,msg);
+    return [NSString stringWithFormat:@"[%@] %@",logTypeStr,msg]; //NSStringFormat(@"[%@] %@",logTypeStr,msg);
     //return NSStringFormat(@"[%@][%@] %@",logTypeStr,time,msg);
     //return NSStringFormat(@"%@ %@",prefix,msg);
     

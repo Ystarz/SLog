@@ -1,8 +1,8 @@
 PODS:
-  - CocoaLumberjack (3.5.3):
-    - CocoaLumberjack/Core (= 3.5.3)
-  - CocoaLumberjack/Core (3.5.3)
-  - SDataTools (0.3.10)
+  - CocoaLumberjack (3.6.0):
+    - CocoaLumberjack/Core (= 3.6.0)
+  - CocoaLumberjack/Core (3.6.0)
+  - SDataTools (0.3.12)
 
 DEPENDENCIES:
   - CocoaLumberjack
@@ -14,9 +14,9 @@ SPEC REPOS:
     - SDataTools
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
-  SDataTools: 0e2588bac447076ab262589f153c8746cca50923
+  CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
+  SDataTools: 885c61a22eba12d90d2abc9ba5d6f7fff8b5f3c9
 
 PODFILE CHECKSUM: a79c1bdfe7789eaed5fb25ca47845e3a5a4ac33d
 
-COCOAPODS: 1.8.0.beta.1
+COCOAPODS: 1.8.3
